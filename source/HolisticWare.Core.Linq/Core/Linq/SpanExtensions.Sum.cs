@@ -2,9 +2,9 @@
 
 namespace Core.Linq
 {
-    public static class SpanExtensions
+    public static class SpanExtensionsSum
     {
-        public static double Average(this Span<byte> span)
+        public static double Sum(this Span<byte> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -17,7 +17,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<short> span)
+        public static double Sum(this Span<short> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -30,7 +30,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<ushort> span)
+        public static double Sum(this Span<ushort> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -43,7 +43,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<int> span)
+        public static double Sum(this Span<int> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -56,7 +56,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<uint> span)
+        public static double Sum(this Span<uint> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -69,7 +69,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<long> span)
+        public static double Sum(this Span<long> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -82,7 +82,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<ulong> span)
+        public static double Sum(this Span<ulong> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -95,7 +95,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<float> span)
+        public static double Sum(this Span<float> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -108,7 +108,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static double Average(this Span<double> span)
+        public static double Sum(this Span<double> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -121,7 +121,7 @@ namespace Core.Linq
             return sum / length;
         }
 
-        public static decimal Average(this Span<decimal> span)
+        public static decimal Sum(this Span<decimal> span)
         {
             decimal sum = 0.0M;
             int length = span.Length;

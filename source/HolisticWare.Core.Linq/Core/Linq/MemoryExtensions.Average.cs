@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class MemoryExtensions
+    public static class MemoryExtensionsAverage
     {
         public static double Average(this Memory<byte> memory)
         {
