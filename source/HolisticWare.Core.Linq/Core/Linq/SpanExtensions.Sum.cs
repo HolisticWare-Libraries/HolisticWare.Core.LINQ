@@ -4,9 +4,9 @@ namespace Core.Linq
 {
     public static class SpanExtensionsSum
     {
-        public static double Sum(this Span<byte> span)
+        public static long Sum(this Span<byte> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -14,12 +14,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<short> span)
+        public static long Sum(this Span<short> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -27,12 +27,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<ushort> span)
+        public static long Sum(this Span<ushort> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -40,12 +40,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<int> span)
+        public static long Sum(this Span<int> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -53,12 +53,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<uint> span)
+        public static long Sum(this Span<uint> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -66,12 +66,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<long> span)
+        public static long Sum(this Span<long> span)
         {
-            double sum = 0.0;
+            long sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -79,12 +79,12 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Sum(this Span<ulong> span)
+        public static ulong Sum(this Span<ulong> span)
         {
-            double sum = 0.0;
+            ulong sum = 0;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
@@ -92,7 +92,7 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
         public static double Sum(this Span<float> span)
@@ -105,7 +105,7 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
         public static double Sum(this Span<double> span)
@@ -118,7 +118,7 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
         public static decimal Sum(this Span<decimal> span)
@@ -131,7 +131,7 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
     }

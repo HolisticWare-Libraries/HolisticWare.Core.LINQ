@@ -21,5 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Min.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Max.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Max.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Count.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Count.cs" />
   </ItemGroup>
 </Project>

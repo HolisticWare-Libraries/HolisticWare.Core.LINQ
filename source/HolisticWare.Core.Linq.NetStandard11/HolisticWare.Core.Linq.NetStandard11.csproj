@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <AssemblyName>HolisticWare.Core.Linq</AssemblyName>
+    <DefaultItemExcludes>$(DefaultItemExcludes);.DS_Store</DefaultItemExcludes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.1" />
+  </ItemGroup>
+  <Import Project="..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems')" />
+</Project>

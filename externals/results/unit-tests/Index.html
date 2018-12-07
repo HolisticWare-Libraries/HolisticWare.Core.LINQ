@@ -322,7 +322,7 @@
                                 <nav>
                                     <ul id='slide-out' class='side-nav fixed'>
                                         <li class='logo'><a href='http://reportunit.relevantcodes.com'><span>ReportUnit</span></a></li>
-                                        <li><a class='waves-effect' href='./Index.html'>Index</a></li>
+                                        <li><a class='waves-effect' href='./Index.html'>Index</a></li><li><a class='waves-effect' href='./TestResult.html'>TestResult</a></li>
                                     </ul>
                                     <a href='#' data-activates='slide-out' class='button-collapse'><i class='mdi-navigation-menu'></i></a>
                                     <div class='nav-main'>
@@ -378,7 +378,23 @@
                                                         <th>Other</th>
                                                         <th>Quick Status</th>
                                                     </tr>
-                                                    <!--%INSERTRESULT%-->
+                                                    <tr>
+                        <td><a href='TestResult.html'>TestResult</a></td>
+                        <td>UnitTests.NUnit.dll</td>
+                        <td class='file-status passed'><span class='label'>passed</span></td>
+                        <td class='total-count'>2</td>
+                        <td class='pass-count'>2</td>
+                        <td class='fail-count'>0</td>
+                        <td class='others-count'>0</td>
+                        <td>
+                            <div class='progress'>
+                                <div class='progress-bar progress-bar-success progress-bar-striped' style='width: 100%'><span class='sr-only'>100%</span></div>
+                                <div class='progress-bar progress-bar-danger progress-bar-striped' style='width: 0%'><span class='sr-only'>0%</span></div>
+                                <div class='progress-bar progress-bar-warning progress-bar-striped' style='width: 0%'><span class='sr-only'>0%</span></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!--%INSERTRESULT%-->
                                                     <tr class='totals-row'>
                                                         <td>TOTAL</td>
                                                         <td></td>
@@ -397,7 +413,7 @@
                                 <div id='modal2' class='modal'>
                                     <div class='modal-content'>
                                         <h4>Console Log</h4>
-                                        [2018.11.17 11:05:56][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/.DS_Store. It is not of a known test runner type.<br />[2018.11.17 11:05:56][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/Nunit3.1.txt. It is not of a known test runner type.<br />[2018.11.17 11:05:56][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/Nunit3.2.txt. It is not of a known test runner type.<br />[2018.11.17 11:05:56][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/XUnit.Results.html. It is not of a known test runner type.<br />[2018.11.17 11:05:56][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/XUnit.Results.xml. It is not of a known test runner type.<br />
+                                        [2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/Index.html. It is not of a known test runner type.<br />[2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/Nunit3.1.txt. It is not of a known test runner type.<br />[2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/Nunit3.2.txt. It is not of a known test runner type.<br />[2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/TestResult.html. It is not of a known test runner type.<br />[2018.12.04 12:43:11][Info] The file /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/TestResult.xml contains NUnit test results<br />[2018.12.04 12:43:11][Info] Number of tests: 2<br />[2018.12.04 12:43:11][Info] Processing root and test-suite elements...<br />[2018.12.04 12:43:11][Info] Building fixture blocks...<br />[2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/XUnit.Results.html. It is not of a known test runner type.<br />[2018.12.04 12:43:11][Info] Skipping /Projects/HW/0-Core/11-HWC.Linq/externals/results/unit-tests/XUnit.Results.xml. It is not of a known test runner type.<br />
                                     </div>
                                     <div class='modal-footer'>
                                         <a href='#!' class='modal-action modal-close waves-effect waves-green btn-flat'>Close</a>

@@ -4,134 +4,174 @@ namespace Core.Linq
 {
     public static class SpanExtensionsMax
     {
-        public static double Max(this Span<byte> span)
+        public static byte Max(this Span<byte> span)
         {
-            double sum = 0.0;
+            byte max = byte.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                byte b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<short> span)
+        public static short Max(this Span<short> span)
         {
-            double sum = 0.0;
+            short max = short.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                short b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<ushort> span)
+        public static ushort Max(this Span<ushort> span)
         {
-            double sum = 0.0;
+            ushort max = ushort.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                ushort b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<int> span)
+        public static int Max(this Span<int> span)
         {
-            double sum = 0.0;
+            int max = int.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                int b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<uint> span)
+        public static uint Max(this Span<uint> span)
         {
-            double sum = 0.0;
+            uint max = uint.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                uint b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<long> span)
+        public static long Max(this Span<long> span)
         {
-            double sum = 0.0;
+            long max = long.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                long b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<ulong> span)
+        public static ulong Max(this Span<ulong> span)
         {
-            double sum = 0.0;
+            ulong max = ulong.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                ulong b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
-        public static double Max(this Span<float> span)
+        public static float Max(this Span<float> span)
         {
-            double sum = 0.0;
+            float max = float.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                float b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
         public static double Max(this Span<double> span)
         {
-            double sum = 0.0;
+            double max = double.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                double b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
         public static decimal Max(this Span<decimal> span)
         {
-            decimal sum = 0.0M;
+            decimal max = decimal.MinValue;
             int length = span.Length;
 
             for (int i = 0; i < length; i++)
             {
-                sum += span[i];
+                decimal b = span[i];
+                if (b > max)
+                {
+                    max = b;
+                }
             }
 
-            return sum / length;
+            return max;
         }
 
     }

@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)UnitTestsSpan.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Average.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Sum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Min.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Max.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Linq\" />
   </ItemGroup>
 </Project>

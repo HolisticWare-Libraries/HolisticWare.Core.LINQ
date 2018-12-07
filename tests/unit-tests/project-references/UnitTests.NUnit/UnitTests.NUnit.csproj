@@ -213,14 +213,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard10\HolisticWare.Core.Linq.NetStandard10.csproj">
-      <Project>{1C1801E9-A10A-49EE-9CA8-0BBF83CB4470}</Project>
-      <Name>HolisticWare.Core.Linq.NetStandard10</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj">
+      <Project>{02D52D15-0E9F-475F-9118-B5A3677F007E}</Project>
+      <Name>HolisticWare.Core.Linq.NetStandard11</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />

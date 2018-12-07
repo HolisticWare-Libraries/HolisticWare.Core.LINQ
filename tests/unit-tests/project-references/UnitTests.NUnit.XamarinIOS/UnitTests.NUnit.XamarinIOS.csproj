@@ -121,9 +121,9 @@
     <Compile Include="UnitTestAppDelegate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard10\HolisticWare.Core.Linq.NetStandard10.csproj">
-      <Project>{1C1801E9-A10A-49EE-9CA8-0BBF83CB4470}</Project>
-      <Name>HolisticWare.Core.Linq.NetStandard10</Name>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj">
+      <Project>{02D52D15-0E9F-475F-9118-B5A3677F007E}</Project>
+      <Name>HolisticWare.Core.Linq.NetStandard11</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
