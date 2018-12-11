@@ -3,6 +3,17 @@
     <Files>
       <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs" Line="81" Column="33" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True" selected="True">
+            <Node name="library-source" expanded="True">
+              <Node name="HolisticWare.Core.Linq.NetStandard11" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.UnitTests.XUnit PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.UnitTests.NUnit PreferredExecutionTarget="MonoDevelop.Default" />
