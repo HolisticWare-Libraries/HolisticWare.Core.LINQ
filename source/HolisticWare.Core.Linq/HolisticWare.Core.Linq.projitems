@@ -8,20 +8,4 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Core.Linq</Import_RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Core\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Core\Linq\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Average.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Average.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Sum.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Sum.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Min.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Min.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Max.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Max.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\MemoryExtensions.Count.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\SpanExtensions.Count.cs" />
-  </ItemGroup>
 </Project>
