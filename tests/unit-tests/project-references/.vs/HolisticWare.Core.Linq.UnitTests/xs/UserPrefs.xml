@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{9F02C2A3-1007-424C-9B59-2DE1CD8AA093}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs">
+    <Files>
+      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs" Line="81" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UnitTests.XUnit PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.UnitTests.NUnit PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>UnitTests.NUnit.XamarinAndroid/UnitTests.NUnit.XamarinAndroid.csproj</String>
+    <String>UnitTests.NUnit.XamarinIOS/UnitTests.NUnit.XamarinIOS.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
