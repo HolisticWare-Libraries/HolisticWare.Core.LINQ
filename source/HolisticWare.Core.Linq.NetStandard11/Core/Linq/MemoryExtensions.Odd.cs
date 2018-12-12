@@ -7,7 +7,9 @@ namespace Core.Linq
     {
         public static IEnumerable<long> Odd(this Memory<byte> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -21,7 +23,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<short> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -35,7 +39,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<ushort> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -49,7 +55,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<int> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -63,7 +71,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<uint> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -77,7 +87,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<long> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -91,7 +103,9 @@ namespace Core.Linq
 
         public static IEnumerable<ulong> Odd(this Memory<ulong> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -105,7 +119,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<float> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -119,7 +135,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<double> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
@@ -133,7 +151,9 @@ namespace Core.Linq
 
         public static IEnumerable<long> Odd(this Memory<decimal> memory)
         {
-            for (int i = 0; i < memory.Length; i++)
+            int length = memory.Length;
+
+            for (int i = 0; i < length; i++)
             {
                 if (i % 2 != 0)
                 //if ((i / 2) * 2 != i)
