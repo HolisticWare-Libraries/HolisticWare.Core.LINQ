@@ -44,9 +44,9 @@ namespace Tests.CommonShared.Core.Linq
     public partial class UnitTests01_Memory_Even
     {
         byte[] array_byte = new byte[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
-        long[] actual_long = new long[] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
-        ulong[] actual_ulong = new ulong[] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
-        uint[] actual_uint = new uint[] { 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 };
+        long[] actual_long = new long[] { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+        ulong[] actual_ulong = new ulong[] { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+        uint[] actual_uint = new uint[] { 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
 
 
         [Benchmark()]
@@ -62,9 +62,9 @@ namespace Tests.CommonShared.Core.Linq
 
             // Assert
 #if NUNIT
-            CollectionAssert.AreEqual((long[])expected_even_byte, actual_long);
+            CollectionAssert.AreEqual(expected_even_byte, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_byte, actual_long);
+            Assert.Equal(expected_even_byte, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_byte, actual_long);
 #endif
@@ -83,13 +83,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Short_Even_Test()
         {
-            IEnumerable<long> expected_even_short = Memory_Short_Even(new Memory<short>(array_short));
+            IEnumerable<long> expected_even_short = Memory_Short_Even(array_short.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_short, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_short, actual_long);
+            Assert.Equal(expected_even_short, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_short, actual_long);
 #endif
@@ -108,13 +108,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_UShort_Even_Test()
         {
-            IEnumerable<long> expected_even_ushort = Memory_UShort_Even(new Memory<ushort>(array_ushort));
+            IEnumerable<long> expected_even_ushort = Memory_UShort_Even(array_ushort.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_ushort, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_ushort, actual_long);
+            Assert.Equal(expected_even_ushort, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_ushort, actual_long);
 #endif
@@ -133,13 +133,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Int_Even_Test()
         {
-            IEnumerable<long> expected_even_int = Memory_Int_Even(new Memory<int>(array_int));
+            IEnumerable<long> expected_even_int = Memory_Int_Even(array_int.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_int, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_int, actual_long);
+            Assert.Equal(expected_even_int, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_int, actual_long);
 #endif
@@ -158,13 +158,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_UInt_Even_Test()
         {
-            IEnumerable<uint> expected_even_uint = Memory_UInt_Even(new Memory<uint>(array_uint));
+            IEnumerable<uint> expected_even_uint = Memory_UInt_Even(array_uint.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((uint[])expected_even_uint, actual_uint);
 #elif XUNIT
-            Assert.Equal((uint[])expected_even_uint, actual_uint);
+            Assert.Equal(expected_even_uint, actual_uint);
 #elif MSTEST
             CollectionAssert.AreEqual((uint[])expected_even_uint, actual_uint);  
 #endif
@@ -183,13 +183,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Long_Even_Test()
         {
-            IEnumerable<long> expected_even_long = Memory_Long_Even(new Memory<long>(array_long));
+            IEnumerable<long> expected_even_long = Memory_Long_Even(array_long.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_long, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_long, actual_long);
+            Assert.Equal(expected_even_long, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_long, actual_long);
 #endif
@@ -208,13 +208,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_ULong_Even_Test()
         {
-            IEnumerable<ulong> expected_even_ulong = Memory_ULong_Even(new Memory<ulong>(array_ulong));
+            IEnumerable<ulong> expected_even_ulong = Memory_ULong_Even(array_ulong.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((ulong[])expected_even_ulong, actual_ulong);
 #elif XUNIT
-            Assert.Equal((ulong[])expected_even_ulong, actual_ulong);
+            Assert.Equal(expected_even_ulong, actual_ulong);
 #elif MSTEST
             CollectionAssert.AreEqual((ulong[])expected_even_ulong, actual_ulong);
 #endif
@@ -233,13 +233,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Float_Even_Test()
         {
-            IEnumerable<long> expected_even_float = Memory_Float_Even(new Memory<float>(array_float));
+            IEnumerable<long> expected_even_float = Memory_Float_Even(array_float.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_float, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_float, actual_long);
+            Assert.Equal(expected_even_float, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_float, actual_long);
 #endif
@@ -258,13 +258,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Double_Even_Test()
         {
-            IEnumerable<long> expected_even_double = Memory_Double_Even(new Memory<double>(array_double));
+            IEnumerable<long> expected_even_double = Memory_Double_Even(array_double.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_double, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_double, actual_long);
+            Assert.Equal(expected_even_double, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_double, actual_long);
 #endif
@@ -283,13 +283,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Decimal_Even_Test()
         {
-            IEnumerable<long> expected_even_decimal = Memory_Decimal_Even(new Memory<decimal>(array_decimal));
+            IEnumerable<long> expected_even_decimal = Memory_Decimal_Even(array_decimal.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((long[])expected_even_decimal, actual_long);
 #elif XUNIT
-            Assert.Equal((long[])expected_even_decimal, actual_long);
+            Assert.Equal(expected_even_decimal, actual_long);
 #elif MSTEST
             CollectionAssert.AreEqual((long[])expected_even_decimal, actual_long);
 #endif

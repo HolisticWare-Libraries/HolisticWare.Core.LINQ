@@ -207,13 +207,13 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_ULong_Odd_Test()
         {
-            IEnumerable<ulong> expected_odd_ulong = Memory_ULong_Odd(new Memory<ulong>(array_ulong));
+            IEnumerable<ulong> expected_odd_ulong = Memory_ULong_Odd(array_ulong.AsMemory());
 
             // Assert
 #if NUNIT
             CollectionAssert.AreEqual((ulong[])expected_odd_ulong, actual_ulong);
 #elif XUNIT
-            Assert.Equal((ulong[])expected_odd_ulong, actual_ulong);
+            Assert.Equal(expected_odd_ulong, actual_ulong);
 #elif MSTEST
             CollectionAssert.AreEqual((ulong[])expected_odd_ulong, actual_ulong);
 #endif
