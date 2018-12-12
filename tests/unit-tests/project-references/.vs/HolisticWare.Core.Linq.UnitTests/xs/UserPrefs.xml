@@ -1,14 +1,35 @@
 ﻿<Properties StartupConfiguration="{9F02C2A3-1007-424C-9B59-2DE1CD8AA093}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs">
     <Files>
       <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs" Line="81" Column="33" />
+      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" Line="65" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True" selected="True">
+          <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True">
             <Node name="library-source" expanded="True">
               <Node name="HolisticWare.Core.Linq.NetStandard11" expanded="True" />
+            </Node>
+            <Node name="Tests.CommonShared" expanded="True">
+              <Node name="Core" expanded="True">
+                <Node name="Linq" expanded="True">
+                  <Node name="UnitTestsMemory.Even.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True">
+            <Node name="UnitTests.NUnit" expanded="True">
+              <Node name="Tests" expanded="True">
+                <Node name="UnitTests01_Memory_Even" expanded="True">
+                  <Node name="Memory_Byte_Even_Test" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -24,7 +45,9 @@
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Projects/HW/0-Core/11-HWC.Linq/tests/Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" line="61" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

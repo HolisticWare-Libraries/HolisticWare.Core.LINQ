@@ -58,7 +58,7 @@ namespace Tests.CommonShared.Core.Linq
         [Test()]
         public void Memory_Byte_Even_Test()
         {
-            IEnumerable<long> expected_even_byte = Memory_Byte_Even(new Memory<byte>(array_byte));
+            IEnumerable<long> expected_even_byte = Memory_Byte_Even(array_byte.AsMemory());
 
             // Assert
 #if NUNIT
