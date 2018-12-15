@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library-source", "library-source", "{56123580-99E9-45AC-8300-ABF8EE1D021E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{3799F198-4FDB-4BFF-811E-D12EEB39D00C}"
+EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{455500BC-A21B-4675-BA87-166BA0CD81A0}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\README.md = ..\..\..\README.md
@@ -12,25 +14,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Tests.CommonShared", "..\..\Tests.CommonShared\Tests.CommonShared.shproj", "{13AB4AD2-D077-48E0-B6F2-791BC25EB413}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit", "UnitTests.NUnit\UnitTests.NUnit.csproj", "{04F3D823-ABEA-46DD-9EC2-56C08CA074DB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.XUnit", "UnitTests.XUnit\UnitTests.XUnit.csproj", "{9F02C2A3-1007-424C-9B59-2DE1CD8AA093}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.MSTest", "UnitTests.MSTest\UnitTests.MSTest.csproj", "{DEEE1AF9-3C2B-43E9-A0FC-FD8006354DE3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{3799F198-4FDB-4BFF-811E-D12EEB39D00C}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.Utils.Shared", "..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.shproj", "{E390F6DA-9F4B-43A4-8ABF-F9434DF2C70D}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Linq", "..\..\..\source\HolisticWare.Core.Linq\HolisticWare.Core.Linq.shproj", "{57B0EB28-7B4E-410D-B021-0DC9D719C11F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Linq.NetStandard11", "..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj", "{02D52D15-0E9F-475F-9118-B5A3677F007E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.XamarinAndroid", "UnitTests.NUnit.XamarinAndroid\UnitTests.NUnit.XamarinAndroid.csproj", "{6144C0CB-53EB-4BFD-B30C-62566C1BE10A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.XamarinIOS", "UnitTests.NUnit.XamarinIOS\UnitTests.NUnit.XamarinIOS.csproj", "{454143FE-45E8-48CE-AE04-71BFB0B413DB}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Linq.NetStandard10", "..\..\..\source\HolisticWare.Core.Linq.NetStandard10\HolisticWare.Core.Linq.NetStandard10.csproj", "{BC277965-949B-47F0-8383-A5CF624AFFA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard11", "netstandard11", "{376AB1C5-C2D2-4D5A-9A7D-F1218D810698}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit", "netstandard11\UnitTests.NUnit\UnitTests.NUnit.csproj", "{04F3D823-ABEA-46DD-9EC2-56C08CA074DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.XUnit", "netstandard11\UnitTests.XUnit\UnitTests.XUnit.csproj", "{9F02C2A3-1007-424C-9B59-2DE1CD8AA093}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests.MSTest", "netstandard11\UnitTests.MSTest\UnitTests.MSTest.csproj", "{DEEE1AF9-3C2B-43E9-A0FC-FD8006354DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.XamarinAndroid", "netstandard11\UnitTests.NUnit.XamarinAndroid\UnitTests.NUnit.XamarinAndroid.csproj", "{6144C0CB-53EB-4BFD-B30C-62566C1BE10A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.NUnit.XamarinIOS", "netstandard11\UnitTests.NUnit.XamarinIOS\UnitTests.NUnit.XamarinIOS.csproj", "{454143FE-45E8-48CE-AE04-71BFB0B413DB}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -101,6 +103,18 @@ Global
 		{02D52D15-0E9F-475F-9118-B5A3677F007E}.Release|iPhone.Build.0 = Release|Any CPU
 		{02D52D15-0E9F-475F-9118-B5A3677F007E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{02D52D15-0E9F-475F-9118-B5A3677F007E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhone.Build.0 = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{6144C0CB-53EB-4BFD-B30C-62566C1BE10A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6144C0CB-53EB-4BFD-B30C-62566C1BE10A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6144C0CB-53EB-4BFD-B30C-62566C1BE10A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
@@ -125,18 +139,6 @@ Global
 		{454143FE-45E8-48CE-AE04-71BFB0B413DB}.Release|iPhone.Build.0 = Release|iPhone
 		{454143FE-45E8-48CE-AE04-71BFB0B413DB}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{454143FE-45E8-48CE-AE04-71BFB0B413DB}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhone.Build.0 = Release|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{BC277965-949B-47F0-8383-A5CF624AFFA2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +148,11 @@ Global
 		{57B0EB28-7B4E-410D-B021-0DC9D719C11F} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
 		{02D52D15-0E9F-475F-9118-B5A3677F007E} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
 		{BC277965-949B-47F0-8383-A5CF624AFFA2} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
+		{DEEE1AF9-3C2B-43E9-A0FC-FD8006354DE3} = {376AB1C5-C2D2-4D5A-9A7D-F1218D810698}
+		{04F3D823-ABEA-46DD-9EC2-56C08CA074DB} = {376AB1C5-C2D2-4D5A-9A7D-F1218D810698}
+		{9F02C2A3-1007-424C-9B59-2DE1CD8AA093} = {376AB1C5-C2D2-4D5A-9A7D-F1218D810698}
+		{6144C0CB-53EB-4BFD-B30C-62566C1BE10A} = {376AB1C5-C2D2-4D5A-9A7D-F1218D810698}
+		{454143FE-45E8-48CE-AE04-71BFB0B413DB} = {376AB1C5-C2D2-4D5A-9A7D-F1218D810698}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {440F697D-77CA-4EA5-9C13-585B4998A64A}

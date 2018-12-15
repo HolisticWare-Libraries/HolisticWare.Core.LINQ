@@ -25,16 +25,16 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj" />
+    <ProjectReference Include="..\..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj" />
   </ItemGroup>
   <Choose>
-    <When Condition="! exists('..\..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10.csproj')">
+    <When Condition="! exists('..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj')">
       <!-- nuget packages (dll) refs -->
     </When>
     <Otherwise>
       <!-- project refs -->
       <ItemGroup>
-        <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10.csproj">
+        <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj">
         </ProjectReference>
       </ItemGroup>
     </Otherwise>
@@ -43,6 +43,6 @@
   If projects for references can be found use ProjectReferences otherwise use NuGet references
   ==================================================================================================
   -->
-  <Import Project="..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
-  <Import Project="..\..\..\Tests.CommonShared\Tests.CommonShared.projitems" Label="Shared" />
+  <Import Project="..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
+  <Import Project="..\..\..\..\Tests.CommonShared\Tests.CommonShared.projitems" Label="Shared" Condition="Exists('..\..\..\..\Tests.CommonShared\Tests.CommonShared.projitems')" />
 </Project>

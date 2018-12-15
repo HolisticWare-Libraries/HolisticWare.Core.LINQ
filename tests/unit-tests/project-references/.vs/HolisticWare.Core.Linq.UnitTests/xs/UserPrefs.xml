@@ -1,34 +1,56 @@
-﻿<Properties StartupConfiguration="{9F02C2A3-1007-424C-9B59-2DE1CD8AA093}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs">
+﻿<Properties StartupConfiguration="{DEEE1AF9-3C2B-43E9-A0FC-FD8006354DE3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Tests.CommonShared/Core/Linq/UnitTestsMemory01/UnitTestsMemory01 (another copy).OddDivision.cs">
     <Files>
-      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsSpan.Min.cs" Line="81" Column="33" />
-      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" Line="65" Column="1" />
+      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsMemory01/UnitTestsMemory01.OddShiftOperators.cs" Line="1" Column="1" />
+      <File FileName="../../Tests.CommonShared/Core/Linq/UnitTestsMemory01/UnitTestsMemory01 (another copy).OddDivision.cs" Line="50" Column="48" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True">
-            <Node name="library-source" expanded="True">
-              <Node name="HolisticWare.Core.Linq.NetStandard11" expanded="True" />
+            <Node name="netstandard11" expanded="True">
+              <Node name="UnitTests.MSTest" expanded="True">
+                <Node name="Dependencies" expanded="True">
+                  <Node name="PackageDependencies" expanded="True" />
+                  <Node name="ProjectDependencies" expanded="True" />
+                </Node>
+              </Node>
             </Node>
             <Node name="Tests.CommonShared" expanded="True">
               <Node name="Core" expanded="True">
                 <Node name="Linq" expanded="True">
-                  <Node name="UnitTestsMemory.Even.cs" selected="True" />
+                  <Node name="UnitTestsMemory01" expanded="True">
+                    <Node name="UnitTestsMemory01 (another copy).OddDivision.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
           <Node name="HolisticWare.Core.Linq.UnitTests" expanded="True">
-            <Node name="UnitTests.NUnit" expanded="True">
-              <Node name="Tests" expanded="True">
-                <Node name="UnitTests01_Memory_Even" expanded="True">
-                  <Node name="Memory_Byte_Even_Test" selected="True" />
+            <Node name="netstandard11" expanded="True">
+              <Node name="UnitTests.MSTest" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="CommonShared" expanded="True">
+                    <Node name="Core" expanded="True">
+                      <Node name="Linq" expanded="True">
+                        <Node name="UnitTestsMemory01" expanded="True" />
+                      </Node>
+                    </Node>
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="UnitTests.NUnit" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="UnitTestsMemory01" expanded="True" />
+                </Node>
+                <Node name="UnitTests" expanded="True" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -36,18 +58,19 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.UnitTests.XUnit PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.UnitTests.NUnit PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
     <String>UnitTests.NUnit.XamarinAndroid/UnitTests.NUnit.XamarinAndroid.csproj</String>
     <String>UnitTests.NUnit.XamarinIOS/UnitTests.NUnit.XamarinIOS.csproj</String>
+    <String>netstandard11/UnitTests.XUnit/UnitTests.XUnit.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Projects/HW/0-Core/11-HWC.Linq/tests/Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" line="61" column="1" />
+      <Breakpoint file="/Projects/HW/0-Core/11-HWC.Linq/tests/Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" line="77" column="1" />
+      <Breakpoint file="/Projects/HW/0-Core/11-HWC.Linq/tests/Tests.CommonShared/Core/Linq/UnitTestsMemory.Even.cs" line="74" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.netstandard11.UnitTests.MSTest PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
