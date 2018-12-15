@@ -3,70 +3,86 @@ using System.Collections.Generic;
 
 namespace Core.Linq
 {
-    public static class MemoryExtensionsOdd
+    public static class SpanExtensionsOdd
     {
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<byte> OddModulo(this Memory<byte> x)
+        public static List<byte> OddModulo(this Span<byte> x)
         {
             int n = x.Length;
 
+            List<byte> odd_numbers = new List<byte>();
+             
             for (int i = 0; i < n; i++)
             {
-                byte x_i = x.Span[i];
+                byte x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<byte> OddDivision(this Memory<byte> x)
+        public static List<byte> OddDivision(this Span<byte> x)
         {
             int n = x.Length;
 
+            List<byte> odd_numbers = new List<byte>();
+
             for (int i = 0; i < n; i++)
             {
-                byte x_i = x.Span[i];
+                byte x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<byte> OddBitwiseAndOperator(this Memory<byte> x)
+        public static List<byte> OddBitwiseAndOperator(this Span<byte> x)
         {
             int n = x.Length;
 
+            List<byte> odd_numbers = new List<byte>();
+
             for (int i = 0; i < n; i++)
             {
-                byte x_i = x.Span[i];
+                byte x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<byte> OddShiftOperators(this Memory<byte> x)
+        public static List<byte> OddShiftOperators(this Span<byte> x)
         {
             int n = x.Length;
 
+            List<byte> odd_numbers = new List<byte>();
+
             for (int i = 0; i < n; i++)
             {
-                byte x_i = x.Span[i];
+                byte x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<byte> Odd(this Memory<byte> x)
+        public static List<byte> Odd(this Span<byte> x)
         {
             return x.OddShiftOperators();
         }
@@ -74,67 +90,83 @@ namespace Core.Linq
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<short> OddModulo(this Memory<short> x)
+        public static List<short> OddModulo(this Span<short> x)
         {
             int n = x.Length;
 
+            List<short> odd_numbers = new List<short>();
+
             for (int i = 0; i < n; i++)
             {
-                short x_i = x.Span[i];
+                short x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<short> OddDivision(this Memory<short> x)
+        public static List<short> OddDivision(this Span<short> x)
         {
             int n = x.Length;
 
+            List<short> odd_numbers = new List<short>();
+
             for (int i = 0; i < n; i++)
             {
-                short x_i = x.Span[i];
+                short x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<short> OddBitwiseAndOperator(this Memory<short> x)
+        public static List<short> OddBitwiseAndOperator(this Span<short> x)
         {
             int n = x.Length;
 
+            List<short> odd_numbers = new List<short>();
+
             for (int i = 0; i < n; i++)
             {
-                short x_i = x.Span[i];
+                short x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<short> OddShiftOperators(this Memory<short> x)
+        public static List<short> OddShiftOperators(this Span<short> x)
         {
             int n = x.Length;
 
+            List<short> odd_numbers = new List<short>();
+
             for (int i = 0; i < n; i++)
             {
-                short x_i = x.Span[i];
+                short x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<short> Odd(this Memory<short> x)
+        public static List<short> Odd(this Span<short> x)
         {
             return x.OddShiftOperators();
         }
@@ -142,335 +174,415 @@ namespace Core.Linq
 
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<ushort> OddModulo(this Memory<ushort> x)
+        public static List<ushort> OddModulo(this Span<ushort> x)
         {
             int n = x.Length;
 
+            List<ushort> odd_numbers = new List<ushort>();
+
             for (int i = 0; i < n; i++)
             {
-                ushort x_i = x.Span[i];
+                ushort x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ushort> OddDivision(this Memory<ushort> x)
+        public static List<ushort> OddDivision(this Span<ushort> x)
         {
             int n = x.Length;
 
+            List<ushort> odd_numbers = new List<ushort>();
+
             for (int i = 0; i < n; i++)
             {
-                ushort x_i = x.Span[i];
+                ushort x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ushort> OddBitwiseAndOperator(this Memory<ushort> x)
+        public static List<ushort> OddBitwiseAndOperator(this Span<ushort> x)
         {
             int n = x.Length;
 
+            List<ushort> odd_numbers = new List<ushort>();
+
             for (int i = 0; i < n; i++)
             {
-                ushort x_i = x.Span[i];
+                ushort x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ushort> OddShiftOperators(this Memory<ushort> x)
+        public static List<ushort> OddShiftOperators(this Span<ushort> x)
         {
             int n = x.Length;
 
+            List<ushort> odd_numbers = new List<ushort>();
+
             for (int i = 0; i < n; i++)
             {
-                ushort x_i = x.Span[i];
+                ushort x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ushort> Odd(this Memory<ushort> x)
+        public static List<ushort> Odd(this Span<ushort> x)
         {
             return x.OddShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<int> OddModulo(this Memory<int> x)
+        public static List<int> OddModulo(this Span<int> x)
         {
             int n = x.Length;
 
+            List<int> odd_numbers = new List<int>();
+
             for (int i = 0; i < n; i++)
             {
-                int x_i = x.Span[i];
+                int x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<int> OddDivision(this Memory<int> x)
+        public static List<int> OddDivision(this Span<int> x)
         {
             int n = x.Length;
 
+            List<int> odd_numbers = new List<int>();
+
             for (int i = 0; i < n; i++)
             {
-                int x_i = x.Span[i];
+                int x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<int> OddBitwiseAndOperator(this Memory<int> x)
+        public static List<int> OddBitwiseAndOperator(this Span<int> x)
         {
             int n = x.Length;
 
+            List<int> odd_numbers = new List<int>();
+
             for (int i = 0; i < n; i++)
             {
-                int x_i = x.Span[i];
+                int x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<int> OddShiftOperators(this Memory<int> x)
+        public static List<int> OddShiftOperators(this Span<int> x)
         {
             int n = x.Length;
 
+            List<int> odd_numbers = new List<int>();
+
             for (int i = 0; i < n; i++)
             {
-                int x_i = x.Span[i];
+                int x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<int> Odd(this Memory<int> x)
+        public static List<int> Odd(this Span<int> x)
         {
             return x.OddShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<uint> OddModulo(this Memory<uint> x)
+        public static List<uint> OddModulo(this Span<uint> x)
         {
             int n = x.Length;
 
+            List<uint> odd_numbers = new List<uint>();
+
             for (int i = 0; i < n; i++)
             {
-                uint x_i = x.Span[i];
+                uint x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<uint> OddDivision(this Memory<uint> x)
+        public static List<uint> OddDivision(this Span<uint> x)
         {
             int n = x.Length;
 
+            List<uint> odd_numbers = new List<uint>();
+
             for (int i = 0; i < n; i++)
             {
-                uint x_i = x.Span[i];
+                uint x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<uint> OddBitwiseAndOperator(this Memory<uint> x)
+        public static List<uint> OddBitwiseAndOperator(this Span<uint> x)
         {
             int n = x.Length;
 
+            List<uint> odd_numbers = new List<uint>();
+
             for (int i = 0; i < n; i++)
             {
-                uint x_i = x.Span[i];
+                uint x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<uint> OddShiftOperators(this Memory<uint> x)
+        public static List<uint> OddShiftOperators(this Span<uint> x)
         {
             int n = x.Length;
 
+            List<uint> odd_numbers = new List<uint>();
+
             for (int i = 0; i < n; i++)
             {
-                uint x_i = x.Span[i];
+                uint x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<uint> Odd(this Memory<uint> x)
+        public static List<uint> Odd(this Span<uint> x)
         {
             return x.OddShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<long> OddModulo(this Memory<long> x)
+        public static List<long> OddModulo(this Span<long> x)
         {
             int n = x.Length;
 
+            List<long> odd_numbers = new List<long>();
+
             for (int i = 0; i < n; i++)
             {
-                long x_i = x.Span[i];
+                long x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<long> OddDivision(this Memory<long> x)
+        public static List<long> OddDivision(this Span<long> x)
         {
             int n = x.Length;
 
+            List<long> odd_numbers = new List<long>();
+
             for (int i = 0; i < n; i++)
             {
-                long x_i = x.Span[i];
+                long x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<long> OddBitwiseAndOperator(this Memory<long> x)
+        public static List<long> OddBitwiseAndOperator(this Span<long> x)
         {
             int n = x.Length;
 
+            List<long> odd_numbers = new List<long>();
+
             for (int i = 0; i < n; i++)
             {
-                long x_i = x.Span[i];
+                long x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<long> OddShiftOperators(this Memory<long> x)
+        public static List<long> OddShiftOperators(this Span<long> x)
         {
             int n = x.Length;
 
+            List<long> odd_numbers = new List<long>();
+
             for (int i = 0; i < n; i++)
             {
-                long x_i = x.Span[i];
+                long x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<long> Odd(this Memory<long> x)
+        public static List<long> Odd(this Span<long> x)
         {
             return x.OddShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<ulong> OddModulo(this Memory<ulong> x)
+        public static List<ulong> OddModulo(this Span<ulong> x)
         {
             int n = x.Length;
 
+            List<ulong> odd_numbers = new List<ulong>();
+
             for (int i = 0; i < n; i++)
             {
-                ulong x_i = x.Span[i];
+                ulong x_i = x[i];
 
                 if (x_i % 2 != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ulong> OddDivision(this Memory<ulong> x)
+        public static List<ulong> OddDivision(this Span<ulong> x)
         {
             int n = x.Length;
 
+            List<ulong> odd_numbers = new List<ulong>();
+
             for (int i = 0; i < n; i++)
             {
-                ulong x_i = x.Span[i];
+                ulong x_i = x[i];
 
                 if ((x_i / 2) * 2 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ulong> OddBitwiseAndOperator(this Memory<ulong> x)
+        public static List<ulong> OddBitwiseAndOperator(this Span<ulong> x)
         {
             int n = x.Length;
 
+            List<ulong> odd_numbers = new List<ulong>();
+
             for (int i = 0; i < n; i++)
             {
-                ulong x_i = x.Span[i];
+                ulong x_i = x[i];
 
                 if ((x_i & 1) != 0)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ulong> OddShiftOperators(this Memory<ulong> x)
+        public static List<ulong> OddShiftOperators(this Span<ulong> x)
         {
             int n = x.Length;
 
+            List<ulong> odd_numbers = new List<ulong>();
+
             for (int i = 0; i < n; i++)
             {
-                ulong x_i = x.Span[i];
+                ulong x_i = x[i];
 
                 if ((x_i >> 1) << 1 != x_i)
                 {
-                    yield return x_i;
+                    odd_numbers.Add(x_i);
                 }
             }
+
+            return odd_numbers;
         }
 
-        public static IEnumerable<ulong> Odd(this Memory<ulong> x)
+        public static List<ulong> Odd(this Span<ulong> x)
         {
             return x.OddShiftOperators();
         }
