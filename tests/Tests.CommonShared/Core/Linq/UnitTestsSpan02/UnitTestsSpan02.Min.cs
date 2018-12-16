@@ -73,53 +73,49 @@ using Core.Linq;
 
 namespace UnitTests.Core.Linq
 {
-    public partial class UnitTests01_Span_Average
+    public partial class UnitTestsSpan02
     {
-        int[] array_int = new int[] { 1, 2, 3, 4, 5 };
-
         [Benchmark()]
-        public double Span_Int_Average(Span<int> span)
+        public int Span_Int_Min(Span<int> span)
         {
-            return span.Average();
+            return span.Min();
         }
 
         [Test()]
-        public void Span_Int_Average_Test()
+        public void Span_Int_Min_Test()
         {
-            double average = Span_Int_Average(new Span<int>(array_int));
+            int min = Span_Int_Min(new Span<int>(array_int));
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
+            Assert.Equal(min, 1.00, 2);
             #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #endif
 
             return;
         }
 
-        double[] array_double = new double[] { 1.0 , 2.0 , 3.0, 4.0, 5.0 };
-
         [Benchmark()]
-        public double Span_Double_Average(Span<double> span)
+        public double Span_Double_Min(Span<double> span)
         {
-            return span.Average();
+            return span.Min();
         }
 
         [Test()]
-        public void Span_Double_Average_Test()
+        public void Span_Double_Min_Test()
         {
-            double average = Span_Double_Average(new Span<double>(array_double));
+            double min = Span_Double_Min(new Span<double>(array_double));
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
+            Assert.Equal(min, 1.00, 2);
             #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #endif
 
             return;

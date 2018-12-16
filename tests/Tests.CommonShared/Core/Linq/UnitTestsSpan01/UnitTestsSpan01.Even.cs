@@ -10,7 +10,7 @@ using NUnit.Framework;
 // MSTest aliases
 using TestInitialize = NUnit.Framework.SetUpAttribute;
 using TestProperty = NUnit.Framework.PropertyAttribute;
-using TestClass = NUnit.Framework.TestFixtureAttribute;
+using TestClass = HolisticWare.Core.Testing.UnitTests.UnitTestsCompatibilityAliasAttribute;
 using TestMethod = NUnit.Framework.TestAttribute;
 using TestCleanup = NUnit.Framework.TearDownAttribute;
 // XUnit aliases
@@ -33,6 +33,7 @@ using Benchmark = HolisticWare.Core.Testing.BenchmarkTests.Benchmark;
 using ShortRunJob = HolisticWare.Core.Testing.BenchmarkTests.ShortRunJob;
 #endif
 
+
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -42,37 +43,37 @@ using System.Linq;
 
 namespace Tests.CommonShared.Core.Linq
 {
-    public partial class UnitTestsMemory01
+    public partial class UnitTestsSpan01
     {
         [Benchmark()]
-        public IEnumerable<byte> Memory_Byte_OddModulo(Memory<byte> memory)
+        public IEnumerable<byte> Memory_Byte_Even(Memory<byte> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_Byte_OddModulo_Test()
+        public void Memory_Byte_Even_Test()
         {
-            IEnumerable<byte> calculated_odd_byte = Memory_Byte_OddModulo(new Memory<byte>(data_array_byte));
+            IEnumerable<byte> calculated_even_byte = Memory_Byte_Even(data_array_byte.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_byte, 
-                                        data_array_odd_result_actual_byte
+                                        calculated_even_byte, 
+                                        data_array_even_result_actual_byte
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_byte, 
-                                        data_array_odd_result_actual_byte
+                                        calculated_even_byte, 
+                                        data_array_even_result_actual_byte
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_byte.ToList(),
-                                        data_array_odd_result_actual_byte
+                                        calculated_even_byte.ToList(),
+                                        data_array_even_result_actual_byte
                                     );
             #endif
 
@@ -80,34 +81,34 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<short> Memory_Short_OddModulo(Memory<short> memory)
+        public IEnumerable<short> Memory_Short_Even(Memory<short> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_Short_OddModulo_Test()
+        public void Memory_Short_Even_Test()
         {
-            IEnumerable<short> calculated_odd_short = Memory_Short_OddModulo(new Memory<short>(data_array_short));
+            IEnumerable<short> calculated_even_short = Memory_Short_Even(data_array_short.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_short, 
-                                        data_array_odd_result_actual_short
+                                        calculated_even_short, 
+                                        data_array_even_result_actual_short
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_short, 
-                                        data_array_odd_result_actual_short
+                                        calculated_even_short, 
+                                        data_array_even_result_actual_short
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_short.ToList(),
-                                        data_array_odd_result_actual_short
+                                        calculated_even_short.ToList(),
+                                        data_array_even_result_actual_short
                                     );
             #endif
 
@@ -115,70 +116,34 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<ushort> Memory_UShort_OddModulo(Memory<ushort> memory)
+        public IEnumerable<ushort> Memory_UShort_Even(Memory<ushort> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_UShort_OddModulo_Test()
+        public void Memory_UShort_Even_Test()
         {
-            IEnumerable<ushort> calculated_odd_ushort = Memory_UShort_OddModulo(new Memory<ushort>(data_array_ushort));
+            IEnumerable<ushort> calculated_even_ushort = Memory_UShort_Even(data_array_ushort.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_ushort, 
-                                        data_array_odd_result_actual_ushort
+                                        calculated_even_ushort, 
+                                        data_array_even_result_actual_ushort
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_ushort, 
-                                        data_array_odd_result_actual_ushort
+                                        calculated_even_ushort, 
+                                        data_array_even_result_actual_ushort
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_ushort.ToList(),
-                                        data_array_odd_result_actual_ushort
-                                    );
-            #endif
-
-            return;
-        }
-
-
-        [Benchmark()]
-        public IEnumerable<int> Memory_Int_OddModulo(Memory<int> memory)
-        {
-            return memory.OddModulo();
-        }
-
-        [Test()]
-        public void Memory_Int_OddModulo_Test()
-        {
-            IEnumerable<int> calculated_odd_int = Memory_Int_OddModulo(new Memory<int>(data_array_int));
-
-            // Assert
-            #if NUNIT
-            CollectionAssert.AreEqual
-                                    (
-                                        calculated_odd_int, 
-                                        data_array_odd_result_actual_int
-                                    );
-            #elif XUNIT
-            Assert.Equal
-                                    (
-                                        calculated_odd_int, 
-                                        data_array_odd_result_actual_int
-                                    );
-            #elif MSTEST
-            CollectionAssert.AreEqual
-                                    (
-                                        calculated_odd_int.ToList(),
-                                        data_array_odd_result_actual_int
+                                        calculated_even_ushort.ToList(),
+                                        data_array_even_result_actual_ushort
                                     );
             #endif
 
@@ -186,34 +151,34 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<uint> Memory_UInt_OddModulo(Memory<uint> memory)
+        public IEnumerable<int> Memory_Int_Even(Memory<int> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_UInt_OddModulo_Test()
+        public void Memory_Int_Even_Test()
         {
-            IEnumerable<uint> calculated_odd_uint = Memory_UInt_OddModulo(new Memory<uint>(data_array_uint));
+            IEnumerable<int> calcuated_even_int = Memory_Int_Even(data_array_int.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_uint, 
-                                        data_array_odd_result_actual_uint
+                                        calcuated_even_int, 
+                                        data_array_even_result_actual_int
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_uint, 
-                                        data_array_odd_result_actual_uint
+                                        calcuated_even_int, 
+                                        data_array_even_result_actual_int
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_uint.ToList(),
-                                        data_array_odd_result_actual_uint
+                                        calcuated_even_int.ToList(),
+                                        data_array_even_result_actual_int
                                     );
             #endif
 
@@ -221,34 +186,69 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<long> Memory_Long_OddModulo(Memory<long> memory)
+        public IEnumerable<uint> Memory_UInt_Even(Memory<uint> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_Long_OddModulo_Test()
+        public void Memory_UInt_Even_Test()
         {
-            IEnumerable<long> calculated_odd_long = Memory_Long_OddModulo(new Memory<long>(data_array_long));
+            IEnumerable<uint> calculated_even_uint = Memory_UInt_Even(data_array_uint.AsMemory());
+
+            // Assert
+        #if NUNIT
+            CollectionAssert.AreEqual
+                                    (
+                                        calculated_even_uint, 
+                                        data_array_even_result_actual_uint
+                                    );
+            #elif XUNIT
+            Assert.Equal
+                                    (
+                                        calculated_even_uint, 
+                                        data_array_even_result_actual_uint
+                                    );
+        #elif MSTEST
+            CollectionAssert.AreEqual
+                                    (
+                                        calculated_even_uint.ToList(),
+                                        data_array_even_result_actual_uint
+                                    );
+        #endif
+
+            return;
+        }
+
+        [Benchmark()]
+        public IEnumerable<long> Memory_Long_Even(Memory<long> memory)
+        {
+            return memory.Even();
+        }
+
+        [Test()]
+        public void Memory_Long_Even_Test()
+        {
+            IEnumerable<long> calculated_even_long = Memory_Long_Even(data_array_long.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_long, 
-                                        data_array_odd_result_actual_long
+                                        calculated_even_long, 
+                                        data_array_even_result_actual_long
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_long, 
-                                        data_array_odd_result_actual_long
+                                        calculated_even_long, 
+                                        data_array_even_result_actual_long
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_long.ToList(),
-                                        data_array_odd_result_actual_long
+                                        calculated_even_long.ToList(),
+                                        data_array_even_result_actual_long
                                     );
             #endif
 
@@ -256,39 +256,39 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<ulong> Memory_ULong_OddModulo(Memory<ulong> memory)
+        public IEnumerable<ulong> Memory_ULong_Even(Memory<ulong> memory)
         {
-            return memory.OddModulo();
+            return memory.Even();
         }
 
         [Test()]
-        public void Memory_ULong_OddModulo_Test()
+        public void Memory_ULong_Even_Test()
         {
-            IEnumerable<ulong> calculated_odd_ulong = Memory_ULong_OddModulo(data_array_ulong.AsMemory());
+            IEnumerable<ulong> calculated_even_ulong = Memory_ULong_Even(data_array_ulong.AsMemory());
 
             // Assert
             #if NUNIT
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_ulong, 
-                                        data_array_odd_result_actual_ulong
+                                        calculated_even_ulong, 
+                                        data_array_even_result_actual_ulong
                                     );
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_ulong, 
-                                        data_array_odd_result_actual_ulong
+                                        calculated_even_ulong,
+                                        data_array_even_result_actual_ulong
                                     );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (
-                                        calculated_odd_ulong.ToList(),
-                                        data_array_odd_result_actual_ulong
+                                        calculated_even_ulong.ToList(),
+                                        data_array_even_result_actual_ulong
                                     );
             #endif
 
             return;
         }
 
-    }
+     }
 }

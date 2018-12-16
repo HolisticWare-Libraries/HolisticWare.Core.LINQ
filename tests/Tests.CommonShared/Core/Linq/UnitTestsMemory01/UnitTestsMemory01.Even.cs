@@ -276,9 +276,9 @@ namespace Tests.CommonShared.Core.Linq
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_even_ulong, 
+                                        calculated_even_ulong,
                                         data_array_even_result_actual_ulong
-                                    )
+                                    );
             #elif MSTEST
             CollectionAssert.AreEqual
                                     (

@@ -42,7 +42,7 @@ using System.Linq;
 
 namespace Tests.CommonShared.Core.Linq
 {
-    public partial class UnitTestsMemory01
+    public partial class UnitTestsSpan01
     {
         [Benchmark()]
         public IEnumerable<byte> Memory_Byte_OddModulo(Memory<byte> memory)

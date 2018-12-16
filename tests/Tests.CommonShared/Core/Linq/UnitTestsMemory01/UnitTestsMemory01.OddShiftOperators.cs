@@ -171,7 +171,7 @@ namespace Tests.CommonShared.Core.Linq
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_byte, 
+                                        calculated_odd_int, 
                                         data_array_odd_result_actual_int
                                     );
             #elif MSTEST
@@ -206,7 +206,7 @@ namespace Tests.CommonShared.Core.Linq
             #elif XUNIT
             Assert.Equal
                                     (
-                                        calculated_odd_byte, 
+                                        calculated_odd_uint, 
                                         data_array_odd_result_actual_uint
                                     );
             #elif MSTEST

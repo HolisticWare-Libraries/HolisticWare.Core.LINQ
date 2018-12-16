@@ -9,19 +9,29 @@
     <Import_RootNamespace>Tests.CommonShared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Average.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Sum.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Min.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan.Max.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.Even.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.00.Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.Odd.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.OddModulo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.OddDivision.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.OddShiftOperators.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\UnitTestsMemory01.OddBitwiseAndOperator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\UnitTestsSpan02.00.Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\UnitTestsSpan02.Average.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\UnitTestsSpan02.Max.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\UnitTestsSpan02.Min.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\UnitTestsSpan02.Sum.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.00.Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.Even.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.Odd.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.OddBitwiseAndOperator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.OddDivision.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.OddModulo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\UnitTestsSpan01.OddShiftOperators.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsMemory01\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan01\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Core\Linq\UnitTestsSpan02\" />
   </ItemGroup>
 </Project>

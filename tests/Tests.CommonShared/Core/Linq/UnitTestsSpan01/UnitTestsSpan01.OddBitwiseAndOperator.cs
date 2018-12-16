@@ -42,18 +42,18 @@ using System.Linq;
 
 namespace Tests.CommonShared.Core.Linq
 {
-    public partial class UnitTestsMemory01
+    public partial class UnitTestsSpan01
     {
         [Benchmark()]
-        public IEnumerable<byte> Memory_Byte_OddModulo(Memory<byte> memory)
+        public IEnumerable<byte> Memory_Byte_OddBitwiseAndOperator(Memory<byte> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_Byte_OddModulo_Test()
+        public void Memory_Byte_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<byte> calculated_odd_byte = Memory_Byte_OddModulo(new Memory<byte>(data_array_byte));
+            IEnumerable<byte> calculated_odd_byte = Memory_Byte_OddBitwiseAndOperator(new Memory<byte>(data_array_byte));
 
             // Assert
             #if NUNIT
@@ -80,15 +80,15 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<short> Memory_Short_OddModulo(Memory<short> memory)
+        public IEnumerable<short> Memory_Short_OddBitwiseAndOperator(Memory<short> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_Short_OddModulo_Test()
+        public void Memory_Short_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<short> calculated_odd_short = Memory_Short_OddModulo(new Memory<short>(data_array_short));
+            IEnumerable<short> calculated_odd_short = Memory_Short_OddBitwiseAndOperator(new Memory<short>(data_array_short));
 
             // Assert
             #if NUNIT
@@ -115,15 +115,15 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<ushort> Memory_UShort_OddModulo(Memory<ushort> memory)
+        public IEnumerable<ushort> Memory_UShort_OddBitwiseAndOperator(Memory<ushort> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_UShort_OddModulo_Test()
+        public void Memory_UShort_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<ushort> calculated_odd_ushort = Memory_UShort_OddModulo(new Memory<ushort>(data_array_ushort));
+            IEnumerable<ushort> calculated_odd_ushort = Memory_UShort_OddBitwiseAndOperator(new Memory<ushort>(data_array_ushort));
 
             // Assert
             #if NUNIT
@@ -151,15 +151,15 @@ namespace Tests.CommonShared.Core.Linq
 
 
         [Benchmark()]
-        public IEnumerable<int> Memory_Int_OddModulo(Memory<int> memory)
+        public IEnumerable<int> Memory_Int_OddBitwiseAndOperator(Memory<int> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_Int_OddModulo_Test()
+        public void Memory_Int_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<int> calculated_odd_int = Memory_Int_OddModulo(new Memory<int>(data_array_int));
+            IEnumerable<int> calculated_odd_int = Memory_Int_OddBitwiseAndOperator(new Memory<int>(data_array_int));
 
             // Assert
             #if NUNIT
@@ -186,15 +186,15 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<uint> Memory_UInt_OddModulo(Memory<uint> memory)
+        public IEnumerable<uint> Memory_UInt_OddBitwiseAndOperator(Memory<uint> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_UInt_OddModulo_Test()
+        public void Memory_UInt_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<uint> calculated_odd_uint = Memory_UInt_OddModulo(new Memory<uint>(data_array_uint));
+            IEnumerable<uint> calculated_odd_uint = Memory_UInt_OddBitwiseAndOperator(new Memory<uint>(data_array_uint));
 
             // Assert
             #if NUNIT
@@ -221,15 +221,15 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<long> Memory_Long_OddModulo(Memory<long> memory)
+        public IEnumerable<long> Memory_Long_OddBitwiseAndOperator(Memory<long> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_Long_OddModulo_Test()
+        public void Memory_Long_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<long> calculated_odd_long = Memory_Long_OddModulo(new Memory<long>(data_array_long));
+            IEnumerable<long> calculated_odd_long = Memory_Long_OddBitwiseAndOperator(new Memory<long>(data_array_long));
 
             // Assert
             #if NUNIT
@@ -256,15 +256,15 @@ namespace Tests.CommonShared.Core.Linq
         }
 
         [Benchmark()]
-        public IEnumerable<ulong> Memory_ULong_OddModulo(Memory<ulong> memory)
+        public IEnumerable<ulong> Memory_ULong_OddBitwiseAndOperator(Memory<ulong> memory)
         {
-            return memory.OddModulo();
+            return memory.OddBitwiseAndOperator();
         }
 
         [Test()]
-        public void Memory_ULong_OddModulo_Test()
+        public void Memory_ULong_OddBitwiseAndOperator_Test()
         {
-            IEnumerable<ulong> calculated_odd_ulong = Memory_ULong_OddModulo(data_array_ulong.AsMemory());
+            IEnumerable<ulong> calculated_odd_ulong = Memory_ULong_OddBitwiseAndOperator(data_array_ulong.AsMemory());
 
             // Assert
             #if NUNIT

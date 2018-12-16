@@ -73,9 +73,8 @@ using Core.Linq;
 
 namespace UnitTests.Core.Linq
 {
-    public partial class UnitTests01_Span_Max
+    public partial class UnitTestsSpan02
     {
-        int[] array_int = new int[] { 1, 2, 3, 4, 5 };
 
         [Benchmark()]
         public int Span_Int_Max(Span<int> span)
@@ -99,8 +98,6 @@ namespace UnitTests.Core.Linq
 
             return;
         }
-
-        double[] array_double = new double[] { 1.0 , 2.0 , 3.0, 4.0, 5.0 };
 
         [Benchmark()]
         public double Span_Double_Max(Span<double> span)

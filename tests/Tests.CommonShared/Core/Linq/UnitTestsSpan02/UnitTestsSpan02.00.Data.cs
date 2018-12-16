@@ -73,56 +73,17 @@ using Core.Linq;
 
 namespace UnitTests.Core.Linq
 {
-    public partial class UnitTests01_Span_Sum
+    public partial class UnitTestsSpan02
     {
-        int[] array_int = new int[] { 1, 2, 3, 4, 5 };
+        int[] array_int = new int[] 
+        { 
+            1, 2, 3, 4, 5 
+        };
 
-        [Benchmark()]
-        public long Span_Int_Sum(Span<int> span)
-        {
-            return span.Sum();
-        }
+        double[] array_double = new double[] 
+        { 
+            1.0, 2.0, 3.0, 4.0, 5.0 
+        };
 
-        [Test()]
-        public void Span_Int_Sum_Test()
-        {
-            long sum = Span_Int_Sum(new Span<int>(array_int));
-
-            // Assert
-            #if NUNIT
-            Assert.AreEqual(sum, 15.00, 0.01);
-            #elif XUNIT
-            Assert.Equal(sum, 15.00, 2);
-            #elif MSTEST
-            Assert.AreEqual(sum, 15.00, 0.01);
-            #endif
-
-            return;
-        }
-
-        double[] array_double = new double[] { 1.0 , 2.0 , 3.0, 4.0, 5.0 };
-
-        [Benchmark()]
-        public double Span_Double_Sum(Span<double> span)
-        {
-            return span.Sum();
-        }
-
-        [Test()]
-        public void Span_Double_Sum_Test()
-        {
-            double sum = Span_Double_Sum(new Span<double>(array_double));
-
-            // Assert
-            #if NUNIT
-            Assert.AreEqual(sum, 15.00, 0.01);
-            #elif XUNIT
-            Assert.Equal(sum,15.00, 2);
-            #elif MSTEST
-            Assert.AreEqual(sum, 15.00, 0.01);
-            #endif
-
-            return;
-        }
     }
 }
