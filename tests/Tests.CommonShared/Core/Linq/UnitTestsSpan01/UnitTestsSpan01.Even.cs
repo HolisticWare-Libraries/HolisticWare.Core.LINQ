@@ -41,6 +41,7 @@ using Core.Linq;
 using System.Collections;
 using System.Linq;
 
+
 namespace Tests.CommonShared.Core.Linq
 {
     public partial class UnitTestsSpan01
