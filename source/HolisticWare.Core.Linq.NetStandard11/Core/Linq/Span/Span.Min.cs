@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class SpanExtensionsMin
+    public static partial class Span
     {
         public static byte Min(this Span<byte> span)
         {

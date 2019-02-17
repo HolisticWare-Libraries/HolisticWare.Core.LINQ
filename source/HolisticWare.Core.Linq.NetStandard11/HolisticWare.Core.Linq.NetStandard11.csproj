@@ -10,5 +10,9 @@
   <ItemGroup>
     <PackageReference Include="System.Memory" Version="4.5.1" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\Linq\Memory\" />
+    <Folder Include="Core\Linq\Span\" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems')" />
 </Project>

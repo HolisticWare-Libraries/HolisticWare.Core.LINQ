@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class MemoryExtensionsSum
+    public static partial class Memory
     {
         public static double Sum(this Memory<byte> memory)
         {

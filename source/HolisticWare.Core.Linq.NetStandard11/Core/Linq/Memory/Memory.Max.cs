@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class MemoryExtensionsMax
+    public static partial class Memory
     {
         public static double Max(this Memory<byte> memory)
         {

@@ -2,9 +2,100 @@
 
 namespace Core.Linq
 {
-    public static class SpanExtensionsAverage
+    public static partial class Span
     {
-        public static double Average(this Span<byte> span)
+        public static long Sum(this Span<byte> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static long Sum(this Span<short> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static long Sum(this Span<ushort> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static long Sum(this Span<int> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static long Sum(this Span<uint> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static long Sum(this Span<long> span)
+        {
+            long sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static ulong Sum(this Span<ulong> span)
+        {
+            ulong sum = 0;
+            int length = span.Length;
+
+            for (int i = 0; i < length; i++)
+            {
+                sum += span[i];
+            }
+
+            return sum;
+        }
+
+        public static double Sum(this Span<float> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -14,10 +105,10 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Average(this Span<short> span)
+        public static double Sum(this Span<double> span)
         {
             double sum = 0.0;
             int length = span.Length;
@@ -27,101 +118,10 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
-        public static double Average(this Span<ushort> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<int> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<uint> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<long> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<ulong> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<float> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static double Average(this Span<double> span)
-        {
-            double sum = 0.0;
-            int length = span.Length;
-
-            for (int i = 0; i < length; i++)
-            {
-                sum += span[i];
-            }
-
-            return sum / length;
-        }
-
-        public static decimal Average(this Span<decimal> span)
+        public static decimal Sum(this Span<decimal> span)
         {
             decimal sum = 0.0M;
             int length = span.Length;
@@ -131,7 +131,7 @@ namespace Core.Linq
                 sum += span[i];
             }
 
-            return sum / length;
+            return sum;
         }
 
     }
