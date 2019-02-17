@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class MemoryExtensionsMin
+    public static partial class Memory
     {
         public static double Min(this Memory<byte> memory)
         {

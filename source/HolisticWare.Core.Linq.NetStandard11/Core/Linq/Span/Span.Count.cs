@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class SpanExtensionsCount
+    public static partial class Span
     {
         public static int Count<T>(this Span<T> span)
         {

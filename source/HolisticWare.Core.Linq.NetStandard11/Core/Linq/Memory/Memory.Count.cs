@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static class MemoryExtensionsCount
+    public static partial class Memory
     {
         public static double Count<T>(this Memory<T> memory)
         {

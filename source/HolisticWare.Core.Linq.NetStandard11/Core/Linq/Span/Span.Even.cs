@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core.Linq
 {
-    public static class SpanExtensionsEven
+    public static partial class Span
     {
         //------------------------------------------------------------------------------------------------
         public static List<byte> EvenModulo(this Span<byte> x)
