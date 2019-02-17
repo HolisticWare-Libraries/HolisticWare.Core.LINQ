@@ -4,10 +4,10 @@ using System.Linq;
 
 namespace Core.Linq
 {
-    public static class IEnumerableExtensionsOdd
+    public static partial class Enumerable
     {
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<byte> OddModulo(this IEnumerable<byte> x)
+        public static IEnumerable<byte> EvenModulo(this IEnumerable<byte> x)
         {
             int n = x.Count();
 
@@ -15,14 +15,14 @@ namespace Core.Linq
             {
                 byte x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<byte> OddDivision(this IEnumerable<byte> x)
+        public static IEnumerable<byte> EvenDivision(this IEnumerable<byte> x)
         {
             int n = x.Count();
 
@@ -30,14 +30,14 @@ namespace Core.Linq
             {
                 byte x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<byte> OddBitwiseAndOperator(this IEnumerable<byte> x)
+        public static IEnumerable<byte> EvenBitwiseAndOperator(this IEnumerable<byte> x)
         {
             int n = x.Count();
 
@@ -52,7 +52,7 @@ namespace Core.Linq
             }
         }
 
-        public static IEnumerable<byte> OddShiftOperators(this IEnumerable<byte> x)
+        public static IEnumerable<byte> EvenShiftOperators(this IEnumerable<byte> x)
         {
             int n = x.Count();
 
@@ -60,22 +60,22 @@ namespace Core.Linq
             {
                 byte x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<byte> Odd(this IEnumerable<byte> x)
+        public static IEnumerable<byte> Even(this IEnumerable<byte> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
 
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<short> OddModulo(this IEnumerable<short> x)
+        public static IEnumerable<short> EvenModulo(this IEnumerable<short> x)
         {
             int n = x.Count();
 
@@ -83,14 +83,14 @@ namespace Core.Linq
             {
                 short x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<short> OddDivision(this IEnumerable<short> x)
+        public static IEnumerable<short> EvenDivision(this IEnumerable<short> x)
         {
             int n = x.Count();
 
@@ -98,14 +98,14 @@ namespace Core.Linq
             {
                 short x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<short> OddBitwiseAndOperator(this IEnumerable<short> x)
+        public static IEnumerable<short> EvenBitwiseAndOperator(this IEnumerable<short> x)
         {
             int n = x.Count();
 
@@ -113,14 +113,14 @@ namespace Core.Linq
             {
                 short x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<short> OddShiftOperators(this IEnumerable<short> x)
+        public static IEnumerable<short> EvenShiftOperators(this IEnumerable<short> x)
         {
             int n = x.Count();
 
@@ -128,22 +128,22 @@ namespace Core.Linq
             {
                 short x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<short> Odd(this IEnumerable<short> x)
+        public static IEnumerable<short> Even(this IEnumerable<short> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<ushort> OddModulo(this IEnumerable<ushort> x)
+        public static IEnumerable<ushort> EvenModulo(this IEnumerable<ushort> x)
         {
             int n = x.Count();
 
@@ -151,14 +151,14 @@ namespace Core.Linq
             {
                 ushort x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ushort> OddDivision(this IEnumerable<ushort> x)
+        public static IEnumerable<ushort> EvenDivision(this IEnumerable<ushort> x)
         {
             int n = x.Count();
 
@@ -166,14 +166,14 @@ namespace Core.Linq
             {
                 ushort x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ushort> OddBitwiseAndOperator(this IEnumerable<ushort> x)
+        public static IEnumerable<ushort> EvenBitwiseAndOperator(this IEnumerable<ushort> x)
         {
             int n = x.Count();
 
@@ -181,14 +181,14 @@ namespace Core.Linq
             {
                 ushort x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ushort> OddShiftOperators(this IEnumerable<ushort> x)
+        public static IEnumerable<ushort> EvenShiftOperators(this IEnumerable<ushort> x)
         {
             int n = x.Count();
 
@@ -196,21 +196,21 @@ namespace Core.Linq
             {
                 ushort x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ushort> Odd(this IEnumerable<ushort> x)
+        public static IEnumerable<ushort> Even(this IEnumerable<ushort> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<int> OddModulo(this IEnumerable<int> x)
+        public static IEnumerable<int> EvenModulo(this IEnumerable<int> x)
         {
             int n = x.Count();
 
@@ -218,14 +218,14 @@ namespace Core.Linq
             {
                 int x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<int> OddDivision(this IEnumerable<int> x)
+        public static IEnumerable<int> EvenDivision(this IEnumerable<int> x)
         {
             int n = x.Count();
 
@@ -233,14 +233,14 @@ namespace Core.Linq
             {
                 int x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<int> OddBitwiseAndOperator(this IEnumerable<int> x)
+        public static IEnumerable<int> EvenBitwiseAndOperator(this IEnumerable<int> x)
         {
             int n = x.Count();
 
@@ -248,14 +248,14 @@ namespace Core.Linq
             {
                 int x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<int> OddShiftOperators(this IEnumerable<int> x)
+        public static IEnumerable<int> EvenShiftOperators(this IEnumerable<int> x)
         {
             int n = x.Count();
 
@@ -263,21 +263,21 @@ namespace Core.Linq
             {
                 int x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<int> Odd(this IEnumerable<int> x)
+        public static IEnumerable<int> Even(this IEnumerable<int> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<uint> OddModulo(this IEnumerable<uint> x)
+        public static IEnumerable<uint> EvenModulo(this IEnumerable<uint> x)
         {
             int n = x.Count();
 
@@ -285,14 +285,14 @@ namespace Core.Linq
             {
                 uint x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<uint> OddDivision(this IEnumerable<uint> x)
+        public static IEnumerable<uint> EvenDivision(this IEnumerable<uint> x)
         {
             int n = x.Count();
 
@@ -300,14 +300,14 @@ namespace Core.Linq
             {
                 uint x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<uint> OddBitwiseAndOperator(this IEnumerable<uint> x)
+        public static IEnumerable<uint> EvenBitwiseAndOperator(this IEnumerable<uint> x)
         {
             int n = x.Count();
 
@@ -315,14 +315,14 @@ namespace Core.Linq
             {
                 uint x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<uint> OddShiftOperators(this IEnumerable<uint> x)
+        public static IEnumerable<uint> EvenShiftOperators(this IEnumerable<uint> x)
         {
             int n = x.Count();
 
@@ -330,21 +330,21 @@ namespace Core.Linq
             {
                 uint x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<uint> Odd(this IEnumerable<uint> x)
+        public static IEnumerable<uint> Even(this IEnumerable<uint> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<long> OddModulo(this IEnumerable<long> x)
+        public static IEnumerable<long> EvenModulo(this IEnumerable<long> x)
         {
             int n = x.Count();
 
@@ -352,14 +352,14 @@ namespace Core.Linq
             {
                 long x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<long> OddDivision(this IEnumerable<long> x)
+        public static IEnumerable<long> EvenDivision(this IEnumerable<long> x)
         {
             int n = x.Count();
 
@@ -367,14 +367,14 @@ namespace Core.Linq
             {
                 long x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<long> OddBitwiseAndOperator(this IEnumerable<long> x)
+        public static IEnumerable<long> EvenBitwiseAndOperator(this IEnumerable<long> x)
         {
             int n = x.Count();
 
@@ -382,14 +382,14 @@ namespace Core.Linq
             {
                 long x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<long> OddShiftOperators(this IEnumerable<long> x)
+        public static IEnumerable<long> EvenShiftOperators(this IEnumerable<long> x)
         {
             int n = x.Count();
 
@@ -397,21 +397,21 @@ namespace Core.Linq
             {
                 long x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<long> Odd(this IEnumerable<long> x)
+        public static IEnumerable<long> Even(this IEnumerable<long> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
 
         //------------------------------------------------------------------------------------------------
-        public static IEnumerable<ulong> OddModulo(this IEnumerable<ulong> x)
+        public static IEnumerable<ulong> EvenModulo(this IEnumerable<ulong> x)
         {
             int n = x.Count();
 
@@ -419,14 +419,14 @@ namespace Core.Linq
             {
                 ulong x_i = x.ElementAt(i);
 
-                if (x_i % 2 != 0)
+                if (x_i % 2 == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ulong> OddDivision(this IEnumerable<ulong> x)
+        public static IEnumerable<ulong> EvenDivision(this IEnumerable<ulong> x)
         {
             int n = x.Count();
 
@@ -434,14 +434,14 @@ namespace Core.Linq
             {
                 ulong x_i = x.ElementAt(i);
 
-                if ((x_i / 2) * 2 != x_i)
+                if ((x_i / 2) * 2 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ulong> OddBitwiseAndOperator(this IEnumerable<ulong> x)
+        public static IEnumerable<ulong> EvenBitwiseAndOperator(this IEnumerable<ulong> x)
         {
             int n = x.Count();
 
@@ -449,14 +449,14 @@ namespace Core.Linq
             {
                 ulong x_i = x.ElementAt(i);
 
-                if ((x_i & 1) != 0)
+                if ((x_i & 1) == 0)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ulong> OddShiftOperators(this IEnumerable<ulong> x)
+        public static IEnumerable<ulong> EvenShiftOperators(this IEnumerable<ulong> x)
         {
             int n = x.Count();
 
@@ -464,16 +464,16 @@ namespace Core.Linq
             {
                 ulong x_i = x.ElementAt(i);
 
-                if ((x_i >> 1) << 1 != x_i)
+                if ((x_i >> 1) << 1 == x_i)
                 {
                     yield return x_i;
                 }
             }
         }
 
-        public static IEnumerable<ulong> Odd(this IEnumerable<ulong> x)
+        public static IEnumerable<ulong> Even(this IEnumerable<ulong> x)
         {
-            return x.OddShiftOperators();
+            return x.EvenShiftOperators();
         }
         //------------------------------------------------------------------------------------------------
     }
