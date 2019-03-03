@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static partial class Memory
+    public static partial class MemoryExtensions
     {
         public static double ElementAt(this Memory<byte> memory, int index)
         {

@@ -2,7 +2,8 @@
 
 namespace Core.Linq
 {
-    public static partial class Span
+    public static partial class SpanExtensions
+
     {
         public static double ElementAt(this Span<byte> span, int index)
         {

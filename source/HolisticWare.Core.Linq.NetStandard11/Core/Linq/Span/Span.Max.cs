@@ -2,7 +2,8 @@
 
 namespace Core.Linq
 {
-    public static partial class Span
+    public static partial class SpanExtensions
+
     {
         public static byte Max(this Span<byte> span)
         {

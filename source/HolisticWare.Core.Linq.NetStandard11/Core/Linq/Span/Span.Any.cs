@@ -2,7 +2,7 @@
 
 namespace Core.Linq
 {
-    public static partial class Span
+    public static partial class SpanExtensions
     {
         public static bool Any(this Span<byte> span)
         {
