@@ -76,46 +76,46 @@ namespace UnitTests.Core.Linq
     public partial class UnitTestsSpan02
     {
         [Benchmark()]
-        public double Span_Int_Average(Span<int> span)
+        public int Span_Int_Min(int[] data)
         {
-            return span.Average();
+            return data.Min();
         }
 
         [Test()]
-        public void Span_Int_Average_Test()
+        public void Span_Int_Min_Test()
         {
-            double average = Span_Int_Average(new Span<int>(array_int));
+            int min = Span_Int_Min(array_int);
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
+            Assert.Equal(min, 1.00, 2);
             #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #endif
 
             return;
         }
 
         [Benchmark()]
-        public double Span_Double_Average(Span<double> span)
+        public double Span_Double_Min(double[] data)
         {
-            return span.Average();
+            return data.Min();
         }
 
         [Test()]
-        public void Span_Double_Average_Test()
+        public void Span_Double_Min_Test()
         {
-            double average = Span_Double_Average(new Span<double>(array_double));
+            double min = Span_Double_Min(array_double);
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
+            Assert.Equal(min, 1.00, 2);
             #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(min, 1.00, 0.01);
             #endif
 
             return;

@@ -126,7 +126,7 @@
       <Name>HolisticWare.Core.Linq.NetStandard10</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\..\..\Tests.CommonShared.netstandard10\Tests.CommonShared.netstandard10.projitems" Label="Shared" Condition="Exists('..\..\..\..\Tests.CommonShared.netstandard10\Tests.CommonShared.netstandard10.projitems')" />
   <Import Project="..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
-  <Import Project="..\..\..\..\Tests.CommonShared\Tests.CommonShared.projitems" Label="Shared" Condition="Exists('..\..\..\..\Tests.CommonShared\Tests.CommonShared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

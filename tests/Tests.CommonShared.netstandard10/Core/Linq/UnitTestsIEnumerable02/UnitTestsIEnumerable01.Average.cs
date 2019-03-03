@@ -62,12 +62,7 @@ using ShortRunJob = HolisticWare.Core.Testing.BenchmarkTests.ShortRunJob;
 #endif
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using System.IO;
-using System.Reflection;
 
 using Core.Linq;
 
@@ -75,15 +70,50 @@ namespace UnitTests.Core.Linq
 {
     public partial class UnitTestsSpan02
     {
-        int[] array_int = new int[] 
-        { 
-            1, 2, 3, 4, 5 
-        };
+        [Benchmark()]
+        public double Span_Int_Average(int[] data)
+        {
+            return data.Average();
+        }
 
-        double[] array_double = new double[] 
-        { 
-            1.0, 2.0, 3.0, 4.0, 5.0 
-        };
+        [Test()]
+        public void Span_Int_Average_Test()
+        {
+            double average = Span_Int_Average(array_int);
 
+            // Assert
+            #if NUNIT
+            Assert.AreEqual(average, 3.00, 0.01);
+            #elif XUNIT
+            Assert.Equal(average, 3.00, 2);
+            #elif MSTEST
+            Assert.AreEqual(average, 3.00, 0.01);
+            #endif
+
+            return;
+        }
+
+        [Benchmark()]
+        public double Span_Double_Average(double[] data)
+        {
+            return data.Average();
+        }
+
+        [Test()]
+        public void Span_Double_Average_Test()
+        {
+            double average = Span_Double_Average(array_double);
+
+            // Assert
+            #if NUNIT
+            Assert.AreEqual(average, 3.00, 0.01);
+            #elif XUNIT
+            Assert.Equal(average, 3.00, 2);
+            #elif MSTEST
+            Assert.AreEqual(average, 3.00, 0.01);
+            #endif
+
+            return;
+        }
     }
 }
