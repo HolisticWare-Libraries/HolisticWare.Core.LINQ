@@ -33,7 +33,7 @@ namespace Benchmarks
             Add(DefaultConfig.Instance.GetColumnProviders().ToArray());
         }
     }
-    
+
     class Program
     {
         static void Main() => BenchmarkRunner.Run<Strings>(new Config());
