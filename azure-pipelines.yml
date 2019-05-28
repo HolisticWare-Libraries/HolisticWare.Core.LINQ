@@ -19,6 +19,7 @@ jobs:
         - visualstudio
         - vstest
         - DotNetFramework
+
      steps:
       - checkout: self
         submodules: recursive
