@@ -14,7 +14,12 @@ jobs:
     displayName: Build on Windows VS2019
     pool:
       vmImage: windows-2019
-    steps:
+      demands:
+        - msbuild
+        - visualstudio
+        - vstest
+        - DotNetFramework
+     steps:
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
@@ -28,7 +33,7 @@ jobs:
           testRunTitle: Windows Tests
 
   - job: build_windows_vs2017
-    displayName: Build on Windows
+    displayName: Build on Windows VS2017
     pool:
       vmImage: vs2017-win2016
     steps:
@@ -45,7 +50,7 @@ jobs:
           testRunTitle: Windows Tests
 
   - job: build_macos
-    displayName: Build on macOS
+    displayName: Build on macOS VS4Mac
     pool:
       vmImage: macos-10.13
     steps:
