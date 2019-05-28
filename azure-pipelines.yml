@@ -15,11 +15,10 @@ jobs:
     pool:
       vmImage: windows-2019
       demands:
-        - msbuild
-        - visualstudio
-        - vstest
-        - DotNetFramework
-
+      - msbuild
+      - visualstudio
+      - vstest
+      - DotNetFramework
      steps:
       - checkout: self
         submodules: recursive
