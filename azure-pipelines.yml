@@ -16,7 +16,7 @@ jobs:
       vmImage: windows-2019
     steps:
       - script: choco install visualstudio2019buildtools
-      - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
+      # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
