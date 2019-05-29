@@ -17,6 +17,8 @@ jobs:
     variables:
       solution: '**/*.sln'
     steps:
+      - checkout: self
+        submodules: recursive
       - task: NuGetToolInstaller@0
         displayName: 'Install NuGet'
       - task: NuGetCommand@2
@@ -48,8 +50,6 @@ jobs:
           version: 2.2.300
           includePreviewVersions: true
           installationPath: $(Agent.ToolsDirectory)/dotnet
-      - checkout: self
-        submodules: recursive
       - powershell: .\build.ps1
         displayName: Run build
       - task: PublishTestResults@2
