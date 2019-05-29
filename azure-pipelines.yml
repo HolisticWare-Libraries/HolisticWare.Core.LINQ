@@ -15,10 +15,20 @@ jobs:
     pool:
       vmImage: windows-2019
     steps:
+      - task: DotNetCoreInstaller@0
+        displayName: 'Install .NET Core sdk 3.0'
+        inputs:
+          version: '3.0.100-preview6-011632'
+      - task: DotNetCoreInstaller@0
+        displayName: 'Inbstall .NET Core sdk 2.2.300'
+        inputs:
+          version: '2.2.300'
       - script: choco install visualstudio2019-workload-netcorebuildtools
-      # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
+      - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
+      - script: choco install dotnetcore-sdk --pre
+      - script: choco install dotnetcore-sdk
       - task: UseDotNet@2
-        displayName: 'Use .NET Core sdk'
+        displayName: 'Use .NET Core SDK'
         inputs:
           packageType: sdk
           version: 2.2.300
