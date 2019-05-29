@@ -14,7 +14,18 @@ jobs:
     displayName: Build on Windows VS2019
     pool:
       vmImage: windows-2019
+    variables:
+      solution: '**/*.sln'
     steps:
+      - task: NuGetToolInstaller@0
+        displayName: 'Install NuGet'
+      - task: NuGetCommand@2
+        displayName: 'NuGet Restore'
+        inputs:
+          restoreSolution: '$(solution)'
+      - task: VSBuild@1
+        inputs:
+          solution: '$(solution)'
       - task: DotNetCoreInstaller@0
         inputs:
           version: '3.0.100-preview4-010963'
