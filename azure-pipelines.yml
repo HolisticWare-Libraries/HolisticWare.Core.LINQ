@@ -15,7 +15,6 @@ jobs:
     pool:
       vmImage: windows-2019
     steps:
-      - script: choco install visualstudio2019buildtools
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
@@ -33,7 +32,6 @@ jobs:
     pool:
       vmImage: vs2017-win2016
     steps:
-      - script: choco install visualstudio2017buildtools
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
