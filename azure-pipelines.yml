@@ -14,12 +14,9 @@ jobs:
     displayName: Build on Windows VS2019
     pool:
       vmImage: windows-2019
-      demands:
-      - msbuild
-      - visualstudio
-      - vstest
-      - DotNetFramework
-     steps:
+    steps:
+      - script: |
+        choco install visualstudio2019buildtools
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
@@ -37,6 +34,8 @@ jobs:
     pool:
       vmImage: vs2017-win2016
     steps:
+      - script: |
+        choco install visualstudio2019buildtools
       - checkout: self
         submodules: recursive
       - powershell: .\build.ps1
