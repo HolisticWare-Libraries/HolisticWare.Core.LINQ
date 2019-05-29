@@ -20,6 +20,9 @@ jobs:
         inputs:
           version: '3.0.100-preview6-011632'
       - script: choco install visualstudio2019buildtools
+      - script: choco install dotnetcore-sdk --pre
+      - script: choco install dotnetcore-sdk
+      - script: choco install visualstudio2019-workload-netcorebuildtools
       # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
       - checkout: self
         submodules: recursive
