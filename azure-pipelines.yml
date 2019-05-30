@@ -23,6 +23,28 @@ jobs:
         submodules: recursive
       - task: NuGetToolInstaller@0
         displayName: 'Install NuGet'
+      - task: DotNetCoreInstaller@0
+        inputs:
+          version: '3.0.100-preview4-010963'
+      - task: DotNetCoreInstaller@0
+        displayName: 'Install .NET Core sdk 3.0'
+        inputs:
+          version: '3.0.100-preview4-010963'
+      - task: DotNetCoreInstaller@0
+        displayName: 'Install .NET Core sdk 2.2.300'
+        inputs:
+          version: '2.2.300'
+      - script: choco install visualstudio2019-workload-netcorebuildtools
+      - script: choco install dotnetcore-sdk --pre
+      - script: choco install dotnetcore-sdk
+      # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
+      - task: UseDotNet@2
+        displayName: 'Use .NET Core SDK'
+        inputs:
+          packageType: sdk
+          version: 2.2.300
+          includePreviewVersions: true
+          installationPath: $(Agent.ToolsDirectory)/dotnet
     #------------------------------------------------------------
       - task: NuGetCommand@2
         displayName: 'NuGet Restore Source'
@@ -53,28 +75,6 @@ jobs:
         inputs:
           solution: '$(solution_tests)'
     #------------------------------------------------------------
-      - task: DotNetCoreInstaller@0
-        inputs:
-          version: '3.0.100-preview4-010963'
-      - task: DotNetCoreInstaller@0
-        displayName: 'Install .NET Core sdk 3.0'
-        inputs:
-          version: '3.0.100-preview4-010963'
-      - task: DotNetCoreInstaller@0
-        displayName: 'Install .NET Core sdk 2.2.300'
-        inputs:
-          version: '2.2.300'
-      - script: choco install visualstudio2019-workload-netcorebuildtools
-      - script: choco install dotnetcore-sdk --pre
-      - script: choco install dotnetcore-sdk
-      # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
-      - task: UseDotNet@2
-        displayName: 'Use .NET Core SDK'
-        inputs:
-          packageType: sdk
-          version: 2.2.300
-          includePreviewVersions: true
-          installationPath: $(Agent.ToolsDirectory)/dotnet
       - powershell: .\build.ps1
         displayName: Run build
       - task: PublishTestResults@2
