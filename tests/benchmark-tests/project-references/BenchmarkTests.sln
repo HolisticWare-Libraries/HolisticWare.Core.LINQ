@@ -17,6 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.NetS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.NetStandard11", "..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj", "{E97E9DD5-86CD-48E6-97AD-E9104F1E17AC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard11", "netstandard11", "{F6904E9C-DA47-46FE-AE6C-E55DAF5854B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netstandard10", "netstandard10", "{98D0A2CD-5A95-435C-9331-C5132965A07D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.Common.Utils.Shared", "..\..\unit-tests\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.shproj", "{E390F6DA-9F4B-43A4-8ABF-F9434DF2C70D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Tests.CommonShared.netstandard10", "..\..\Tests.CommonShared.netstandard10\Tests.CommonShared.netstandard10.shproj", "{13AB4AD2-D077-48E0-B6F2-791BC25EB413}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\Tests.CommonShared\Tests.CommonShared.projitems*{13ab4ad2-d077-48e0-b6f2-791bc25eb413}*SharedItemsImports = 13
@@ -59,6 +67,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E7F70F97-372A-4D81-AAA2-BB354CFAA2C4} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
 		{E97E9DD5-86CD-48E6-97AD-E9104F1E17AC} = {56123580-99E9-45AC-8300-ABF8EE1D021E}
+		{2350C347-ED7F-49E9-B3A5-6EBECD5C27C4} = {F6904E9C-DA47-46FE-AE6C-E55DAF5854B0}
+		{DD4AC4FC-52B0-49F2-85DE-6E6C441F5207} = {F6904E9C-DA47-46FE-AE6C-E55DAF5854B0}
+		{57A0B06A-7FF0-4FAA-9F73-B9CE93A354DE} = {F6904E9C-DA47-46FE-AE6C-E55DAF5854B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {440F697D-77CA-4EA5-9C13-585B4998A64A}

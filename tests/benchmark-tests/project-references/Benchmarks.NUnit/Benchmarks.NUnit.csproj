@@ -43,28 +43,6 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.MatlabOctave.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.MatlabOctave.Sequential.NetStandard10.csproj">
-      <Project>{74aff2e3-3e45-4df3-8a94-678d13b4a29b}</Project>
-      <Name>HolisticWare.Core.Math.Statistics.Descriptive.MatlabOctave.Sequential.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Python.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.Python.Sequential.NetStandard10.csproj">
-      <Project>{f9e03430-a1c5-40dd-914f-4190e1d14e80}</Project>
-      <Name>HolisticWare.Core.Math.Statistics.Descriptive.Python.Sequential.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.R.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.R.Sequential.NetStandard10.csproj">
-      <Project>{0c54645e-1c9b-4a21-b39c-2370f2f6e9d6}</Project>
-      <Name>HolisticWare.Core.Math.Statistics.Descriptive.R.Sequential.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10.csproj">
-      <Project>{DEFACBA9-2E24-46BD-B3E0-EFF602FA05DC}</Project>
-      <Name>HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\externals\Core.Text\source\HolisticWare.Core.Text.NetStandard10\HolisticWare.Core.Text.NetStandard10.csproj">
-      <Project>{E03C830B-AD14-450C-8804-12E32645EDEC}</Project>
-      <Name>HolisticWare.Core.Text.NetStandard10</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="BenchmarkDotNet">
       <Version>0.10.14</Version>
     </PackageReference>
@@ -134,5 +112,14 @@
       <Version>4.5.1</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj">
+      <Project>{E97E9DD5-86CD-48E6-97AD-E9104F1E17AC}</Project>
+      <Name>HolisticWare.Core.Linq.NetStandard11</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems" Label="Shared" Condition="Exists('..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems')" />
+  <Import Project="..\..\..\unit-tests\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\..\unit-tests\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
+  <Import Project="..\..\Benchmarks.Common.Utils.Shared\Benchmarks.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\Benchmarks.Common.Utils.Shared\Benchmarks.Common.Utils.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

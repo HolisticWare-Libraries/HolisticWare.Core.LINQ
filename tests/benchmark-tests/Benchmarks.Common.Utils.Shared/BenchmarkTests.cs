@@ -57,7 +57,6 @@ using Fact = Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute;
 #endif
 
 using System.Linq;
-using UnitTests.Core.Math.Statistics.Descriptive.Sequential.Sync;
 using System.IO;
 using System.Reflection;
 using System;
@@ -71,97 +70,7 @@ namespace Benchmarks.CommonShared
         public void Benchmark_Tests20180119Dataset01()
         {
             BenchmarkRunner
-                .Run<Tests20180119Dataset01>
-                (
-                    ManualConfig
-                    .Create(new Config())
-                    //.WithLaunchCount(1)     // benchmark process will be launched only once
-                    //.WithIterationTime(100) // 100ms per iteration
-                    //.WithWarmupCount(3)     // 3 warmup iteration
-                    //.WithTargetCount(3)     // 3 target iteration
-                    //.With(BenchmarkDotNet.Jobs.Job.RyuJitX64)
-                    //.With(BenchmarkDotNet.Jobs.Job.Core)
-                    //.With(BenchmarkDotNet.Validators.ExecutionValidator.FailOnError)
-                    .WithArtifactsPath
-                    (
-                        #if NUNIT
-                        TestContext.CurrentContext.TestDirectory
-                        #elif XUNIT
-                        Environment.CurrentDirectory
-                        #elif MSTEST
-                        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                        #endif
-                    )
-                );
-
-            return;
-        }
-
-        [Test()]
-        public void Benchmark_Tests20180119Dataset02()
-        {
-            BenchmarkRunner
-                .Run<Tests20180119Dataset02>
-                (
-                    ManualConfig
-                    .Create(new Config())
-                    //.WithLaunchCount(1)     // benchmark process will be launched only once
-                    //.WithIterationTime(100) // 100ms per iteration
-                    //.WithWarmupCount(3)     // 3 warmup iteration
-                    //.WithTargetCount(3)     // 3 target iteration
-                    //.With(BenchmarkDotNet.Jobs.Job.RyuJitX64)
-                    //.With(BenchmarkDotNet.Jobs.Job.Core)
-                    //.With(BenchmarkDotNet.Validators.ExecutionValidator.FailOnError)
-                    .WithArtifactsPath
-                    (
-                        #if NUNIT
-                        TestContext.CurrentContext.TestDirectory
-                        #elif XUNIT
-                        Environment.CurrentDirectory
-                        #elif MSTEST
-                        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                        #endif
-                    )
-                );
-
-            return;
-        }
-
-        [Test()]
-        public void Benchmark_Tests20180119Dataset03()
-        {
-            BenchmarkRunner
-                .Run<Tests20180119Dataset03>
-                (
-                    ManualConfig
-                    .Create(new Config())
-                    //.WithLaunchCount(1)     // benchmark process will be launched only once
-                    //.WithIterationTime(100) // 100ms per iteration
-                    //.WithWarmupCount(3)     // 3 warmup iteration
-                    //.WithTargetCount(3)     // 3 target iteration
-                    //.With(BenchmarkDotNet.Jobs.Job.RyuJitX64)
-                    //.With(BenchmarkDotNet.Jobs.Job.Core)
-                    //.With(BenchmarkDotNet.Validators.ExecutionValidator.FailOnError)
-                    .WithArtifactsPath
-                    (
-                        #if NUNIT
-                        TestContext.CurrentContext.TestDirectory
-                        #elif XUNIT
-                        Environment.CurrentDirectory
-                        #elif MSTEST
-                        Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                        #endif
-                    )
-                );
-
-            return;
-        }
-
-        [Test()]
-        public void UnitTests20180227DataSet001()
-        {
-            BenchmarkRunner
-                .Run<UnitTests20180227DataSet001>
+                .Run<Tests.CommonShared.Core.Linq.UnitTestsMemory01>
                 (
                     ManualConfig
                     .Create(new Config())
