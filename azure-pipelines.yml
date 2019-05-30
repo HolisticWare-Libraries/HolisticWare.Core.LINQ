@@ -15,19 +15,44 @@ jobs:
     pool:
       vmImage: windows-2019
     variables:
-      solution: '**/*.sln'
+      solution_source: './source/**/*.sln'
+      solution_samples: './samples/**/*.sln'
+      solution_tests: './tests/**/*.sln'
     steps:
       - checkout: self
         submodules: recursive
       - task: NuGetToolInstaller@0
         displayName: 'Install NuGet'
+    #------------------------------------------------------------
       - task: NuGetCommand@2
-        displayName: 'NuGet Restore'
+        displayName: 'NuGet Restore Source'
         inputs:
-          restoreSolution: '$(solution)'
+          restoreSolution: '$(solution_source)'
       - task: VSBuild@1
+        displayName: 'Build Source'
         inputs:
-          solution: '$(solution)'
+          solution: '$(solution_source)'
+    #------------------------------------------------------------
+    #------------------------------------------------------------
+      - task: NuGetCommand@2
+        displayName: 'NuGet Restore Samples'
+        inputs:
+          restoreSolution: '$(solution_samples)'
+      - task: VSBuild@1
+        displayName: 'Build Samples'
+        inputs:
+          solution: '$(solution_samples)'
+    #------------------------------------------------------------
+    #------------------------------------------------------------
+      - task: NuGetCommand@2
+        displayName: 'NuGet Restore Tests'
+        inputs:
+          restoreSolution: '$(solution_tests)'
+      - task: VSBuild@1
+        displayName: 'Build Tests'
+        inputs:
+          solution: '$(solution_tests)'
+    #------------------------------------------------------------
       - task: DotNetCoreInstaller@0
         inputs:
           version: '3.0.100-preview4-010963'
