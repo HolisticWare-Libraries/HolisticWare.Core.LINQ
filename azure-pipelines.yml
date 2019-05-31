@@ -15,9 +15,10 @@ jobs:
     pool:
       vmImage: windows-2019
     variables:
-      solution_source: './source/**/*.sln'
-      solution_samples: './samples/**/*.sln'
-      solution_tests: './tests/**/*.sln'
+      solution_source:              './source/**/*.sln'
+      solution_samples:             './samples/**/*.sln'
+      solution_tests_unit_tests:    './tests/unit-tests/**/*.sln'
+      solution_tests_benchmarks:    './tests/benchmarks/**/*.sln'
     steps:
       - checkout: self
         submodules: recursive
@@ -67,13 +68,23 @@ jobs:
     #------------------------------------------------------------
     #------------------------------------------------------------
       - task: NuGetCommand@2
-        displayName: 'NuGet Restore Tests'
+        displayName: 'NuGet Restore Tests UnitTests'
         inputs:
-          restoreSolution: '$(solution_tests)'
+          restoreSolution: '$(solution_tests_unit_tests)'
       - task: VSBuild@1
-        displayName: 'Build Tests'
+        displayName: 'Build Tests UnitTests'
         inputs:
-          solution: '$(solution_tests)'
+          solution: '$(solution_tests_unit_tests)'
+    #------------------------------------------------------------
+    #------------------------------------------------------------
+      - task: NuGetCommand@2
+        displayName: 'NuGet Restore Tests Benchmarks'
+        inputs:
+          restoreSolution: '$(solution_tests_benchmarks)'
+      - task: VSBuild@1
+        displayName: 'Build Tests Benchmarks'
+        inputs:
+          solution: '$(solution_tests_benchmarks)'
     #------------------------------------------------------------
       - powershell: .\build.ps1
         displayName: Run build
