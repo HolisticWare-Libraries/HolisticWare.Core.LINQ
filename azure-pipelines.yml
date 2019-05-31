@@ -67,24 +67,28 @@ jobs:
           solution: '$(solution_samples)'
     #------------------------------------------------------------
     #------------------------------------------------------------
-      - task: NuGetCommand@2
-        displayName: 'NuGet Restore Tests UnitTests'
-        inputs:
-          restoreSolution: '$(solution_tests_unit_tests)'
-      - task: VSBuild@1
-        displayName: 'Build Tests UnitTests'
-        inputs:
-          solution: '$(solution_tests_unit_tests)'
+    #  - task: NuGetCommand@2
+    #    displayName: 'NuGet Restore Tests UnitTests'
+    #    inputs:
+    #      restoreSolution: '$(solution_tests_unit_tests)'
+    #  - task: VSBuild@1
+    #    displayName: 'Build Tests UnitTests'
+    #    inputs:
+    #      solution: '$(solution_tests_unit_tests)'
+      - script: dotnet restore ./tests/unit-tests/*.sln
+        isplayName: 'dotnet restore ./tests/unit-tests/*.sln'
     #------------------------------------------------------------
     #------------------------------------------------------------
-      - task: NuGetCommand@2
-        displayName: 'NuGet Restore Tests Benchmarks'
-        inputs:
-          restoreSolution: '$(solution_tests_benchmarks)'
-      - task: VSBuild@1
-        displayName: 'Build Tests Benchmarks'
-        inputs:
-          solution: '$(solution_tests_benchmarks)'
+    #  - task: NuGetCommand@2
+    #    displayName: 'NuGet Restore Tests Benchmarks'
+    #    inputs:
+    #      restoreSolution: '$(solution_tests_benchmarks)'
+    #  - task: VSBuild@1
+    #    displayName: 'Build Tests Benchmarks'
+    #    inputs:
+    #      solution: '$(solution_tests_benchmarks)'
+      - script: dotnet restore ./tests/benchmarks/*.sln
+        isplayName: 'dotnet restore ./tests/benchmarks/*.sln'
     #------------------------------------------------------------
       - powershell: .\build.ps1
         displayName: Run build
