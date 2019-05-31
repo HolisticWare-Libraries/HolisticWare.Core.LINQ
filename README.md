@@ -22,6 +22,8 @@ NOTE: sideproject for learning LINQ.
     
     *   GitLab
     
+        *   [![GitLab pipeline status](https://gitlab.com/holisticware.core/HolisticWare-Core-Linq/badges/master/pipeline.svg)](https://gitlab.com/holisticware.core/HolisticWare-Core-Linq/commits/master)
+    
     
 ## Utility Extension Methods
 
