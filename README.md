@@ -6,7 +6,23 @@ LINQ APIs for some uiltities (like `Even()` and `Odd()`) and for LINQ to `Memory
 
 NOTE: sideproject for learning LINQ.
 
+## Links / References
 
+*   repos
+
+    *   https://github.com/HolisticWare/HolisticWare.Core.Linq
+
+    *   https://gitlab.com/holisticware.core/HolisticWare-Core-Linq
+
+*   CI/CD
+
+    *   Azure.DevOps
+    
+        *   [![Build Status](https://dev.azure.com/holisticware-net/Core.Linq/_apis/build/status/HolisticWare.HolisticWare.Core.Linq?branchName=master)](https://dev.azure.com/holisticware-net/Core.Linq/_build/latest?definitionId=3&branchName=master)
+    
+    *   GitLab
+    
+    
 ## Utility Extension Methods
 
 LINQ like utilites:
