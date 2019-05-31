@@ -57,10 +57,12 @@ jobs:
           solution: '$(solution_source)'
     #------------------------------------------------------------
     #------------------------------------------------------------
-      - task: NuGetCommand@2
-        displayName: 'NuGet Restore Samples'
-        inputs:
-          restoreSolution: '$(solution_samples)'
+    #  - task: NuGetCommand@2
+    #    displayName: 'NuGet Restore Samples'
+    #    inputs:
+    #      restoreSolution: '$(solution_samples)'
+      - script: dotnet restore $(solution_samples)
+        displayName: 'dotnet restore Samples'
       - task: VSBuild@1
         displayName: 'Build Samples'
         inputs:
@@ -71,24 +73,24 @@ jobs:
     #    displayName: 'NuGet Restore Tests UnitTests'
     #    inputs:
     #      restoreSolution: '$(solution_tests_unit_tests)'
-    #  - task: VSBuild@1
-    #    displayName: 'Build Tests UnitTests'
-    #    inputs:
-    #      solution: '$(solution_tests_unit_tests)'
-      - script: ./tests/unit-tests/**/*.sln
-        displayName: 'dotnet restore ./tests/unit-tests/**/*.sln'
+      - script: dotnet restore $(solution_tests_unit_tests)
+        displayName: 'dotnet restore Tests UnitTests'
+      - task: VSBuild@1
+        displayName: 'Build Tests UnitTests'
+        inputs:
+          solution: '$(solution_tests_unit_tests)'
     #------------------------------------------------------------
     #------------------------------------------------------------
     #  - task: NuGetCommand@2
     #    displayName: 'NuGet Restore Tests Benchmarks'
     #    inputs:
     #      restoreSolution: '$(solution_tests_benchmarks)'
-    #  - task: VSBuild@1
-    #    displayName: 'Build Tests Benchmarks'
-    #    inputs:
-    #      solution: '$(solution_tests_benchmarks)'
-      - script: dotnet restore ./tests/benchmarks/**/*.sln
-        displayName: 'dotnet restore ./tests/benchmarks/**/*.sln'
+      - script: dotnet restore $(solution_tests_benchmarks)
+        displayName: 'dotnet restore Tests Benchmarks'
+      - task: VSBuild@1
+        displayName: 'Build Tests Benchmarks'
+        inputs:
+          solution: '$(solution_tests_benchmarks)'
     #------------------------------------------------------------
       - powershell: .\build.ps1
         displayName: Run build
