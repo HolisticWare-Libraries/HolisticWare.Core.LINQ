@@ -1,0 +1,10 @@
+<Project>
+  <PropertyGroup>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <GenerateFullPaths>true</GenerateFullPaths>
+    <LangVersion>latest</LangVersion>
+    <RuntimeFrameworkVersion>2.2.5</RuntimeFrameworkVersion>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+</Project>
