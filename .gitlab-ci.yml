@@ -1,0 +1,33 @@
+image: microsoft/dotnet:latest
+
+stages:
+  - build
+  - test
+
+variables:
+  test: "Example.Test"
+
+before_script:
+    - "cd source"
+    - "dotnet restore"
+    - "cd .."
+    - "cd samples"
+    - "dotnet restore"
+    - "cd .."
+
+build:
+  stage: build
+  script:
+    - "cd source"
+    - "dotnet build"
+    - "cd .."
+    - "cd samples"
+    - "dotnet build"
+    - "cd .."
+
+test:
+  stage: test
+  script:
+    - "cd $test"
+    - "dotnet test"
+
