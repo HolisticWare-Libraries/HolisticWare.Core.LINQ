@@ -1,33 +1,58 @@
-image: microsoft/dotnet:latest
-
 stages:
-  - build
-  - test
+  - build-dotnet
+  - build-mono
+  - test-dotnet
+  - test-mono
 
-variables:
-  test: "Example.Test"
-
-before_script:
+build-dotnet:
+  stage: build-dotnet
+  image: microsoft/dotnet:latest
+  before_script:
     - "cd source"
     - "dotnet restore"
     - "cd .."
     - "cd samples"
     - "dotnet restore"
     - "cd .."
-
-build:
-  stage: build
   script:
-    - "cd source"
-    - "dotnet build"
-    - "cd .."
-    - "cd samples"
-    - "dotnet build"
-    - "cd .."
+      - "cd source"
+      - "dotnet build"
+      - "cd .."
+      - "cd samples"
+      - "dotnet build"
+      - "cd .."
 
-test:
-  stage: test
+build-mono:
+  stage: build-mono
+  image: mono:latest
+  before_script:
   script:
-    - "cd $test"
-    - "dotnet test"
+    - nuget restore ./source/Source.sln
+    - msbuild
+        /p:Configuration="Release"
+        /p:Platform="Any CPU"
+        "./source/Source.sln"
+    - !
+      msbuild
+        /p:Configuration="Release"
+        /p:Platform="Any CPU"
+        "./samples/Samples.sln"
+      msbuild
+        /p:Configuration="Debug"
+        /p:Platform="Any CPU"
+        "./samples/Samples.sln"
 
+#test-dotnet:
+#  stage: test-dotnet
+#  image: microsoft/dotnet:latest
+#  script:
+#        - "cd $test"
+#        - "dotnet test"
+
+#test-mono:
+#  stage: test-mono
+#  image: mono:latest
+#  script:
+#        - "cd $test"
+#        - "dotnet test"
+mono /root/.nuget/packages/nunit.consolerunner/3.9.0/tools/nunit3-console.exe Plugin.Tests/bin/Release/Plugin.Tests.dll
