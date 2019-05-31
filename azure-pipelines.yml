@@ -76,7 +76,7 @@ jobs:
     #    inputs:
     #      solution: '$(solution_tests_unit_tests)'
       - script: dotnet restore ./tests/unit-tests/*.sln
-        isplayName: 'dotnet restore ./tests/unit-tests/*.sln'
+        displayName: 'dotnet restore ./tests/unit-tests/*.sln'
     #------------------------------------------------------------
     #------------------------------------------------------------
     #  - task: NuGetCommand@2
@@ -88,7 +88,7 @@ jobs:
     #    inputs:
     #      solution: '$(solution_tests_benchmarks)'
       - script: dotnet restore ./tests/benchmarks/*.sln
-        isplayName: 'dotnet restore ./tests/benchmarks/*.sln'
+        displayName: 'dotnet restore ./tests/benchmarks/*.sln'
     #------------------------------------------------------------
       - powershell: .\build.ps1
         displayName: Run build
