@@ -35,7 +35,7 @@ jobs:
         displayName: 'Install .NET Core sdk 2.2.300'
         inputs:
           version: '2.2.300'
-      - script: dotnet dev-certs https --trust
+      # - script: dotnet dev-certs https --trust
       - script: choco install visualstudio2019-workload-netcorebuildtools
       - script: choco install dotnetcore-sdk --pre
       - script: choco install dotnetcore-sdk
