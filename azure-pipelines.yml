@@ -68,9 +68,9 @@ jobs:
     #    inputs:
     #      restoreSolution: '$(solution_samples)'
       - script: |
-        cd ./samples/
-        dotnet restore
-        cd ../
+          cd ./samples/
+          dotnet restore
+          cd ../
         displayName: 'dotnet restore Samples'
       - task: VSBuild@1
         displayName: 'Build Samples'
