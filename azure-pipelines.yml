@@ -51,6 +51,7 @@ jobs:
         displayName: 'NuGet Restore Source'
         inputs:
           restoreSolution: '$(solution_source)'
+      - script: dotnet restore ./source/**/*.csproj
       - task: VSBuild@1
         displayName: 'Build Source'
         inputs:
@@ -61,7 +62,7 @@ jobs:
     #    displayName: 'NuGet Restore Samples'
     #    inputs:
     #      restoreSolution: '$(solution_samples)'
-      - script: dotnet restore $(solution_samples)
+      - script: dotnet restore ./samples/**/*.csproj
         displayName: 'dotnet restore Samples'
       - task: VSBuild@1
         displayName: 'Build Samples'
@@ -73,27 +74,27 @@ jobs:
     #    displayName: 'NuGet Restore Tests UnitTests'
     #    inputs:
     #      restoreSolution: '$(solution_tests_unit_tests)'
-      - script: dotnet restore $(solution_tests_unit_tests)
+      - script: dotnet restore ./tests/unit-tests/**/*.sln
         displayName: 'dotnet restore Tests UnitTests'
       - task: VSBuild@1
         displayName: 'Build Tests UnitTests'
         inputs:
-          solution: '$(solution_tests_unit_tests)'
+          solution: 'dotnet restore ./tests/unit-tests/**/*.sln'
     #------------------------------------------------------------
     #------------------------------------------------------------
     #  - task: NuGetCommand@2
     #    displayName: 'NuGet Restore Tests Benchmarks'
     #    inputs:
     #      restoreSolution: '$(solution_tests_benchmarks)'
-      - script: dotnet restore $(solution_tests_benchmarks)
+      - script: dotnet restore ../tests/benchmark-tests/**/*.sln
         displayName: 'dotnet restore Tests Benchmarks'
       - task: VSBuild@1
         displayName: 'Build Tests Benchmarks'
         inputs:
-          solution: '$(solution_tests_benchmarks)'
+          solution: './tests/benchmark-tests/**/*.sln'
     #------------------------------------------------------------
       - powershell: .\build.ps1
-        displayName: Run build
+        displayName: Run Cake Build
       - task: PublishTestResults@2
         displayName: Publish test results
         condition: always()
