@@ -35,6 +35,7 @@ jobs:
         displayName: 'Install .NET Core sdk 2.2.300'
         inputs:
           version: '2.2.300'
+      - script: dotnet dev-certs https --trust
       - script: choco install visualstudio2019-workload-netcorebuildtools
       - script: choco install dotnetcore-sdk --pre
       - script: choco install dotnetcore-sdk
@@ -51,7 +52,11 @@ jobs:
         displayName: 'NuGet Restore Source'
         inputs:
           restoreSolution: '$(solution_source)'
-      - script: dotnet restore ./source/**/*.csproj
+      - script: |
+          cd ./source/
+          dotnet restore
+          cd ../
+        displayName: 'dotnet restore Source'
       - task: VSBuild@1
         displayName: 'Build Source'
         inputs:
@@ -62,7 +67,10 @@ jobs:
     #    displayName: 'NuGet Restore Samples'
     #    inputs:
     #      restoreSolution: '$(solution_samples)'
-      - script: dotnet restore ./samples/**/*.csproj
+      - script: |
+        cd ./samples/
+        dotnet restore
+        cd ../
         displayName: 'dotnet restore Samples'
       - task: VSBuild@1
         displayName: 'Build Samples'
@@ -74,6 +82,10 @@ jobs:
     #    displayName: 'NuGet Restore Tests UnitTests'
     #    inputs:
     #      restoreSolution: '$(solution_tests_unit_tests)'
+      - script: |
+          cd ./tests/unit-tests/project-references/
+          dotnet restore
+          cd ../../../
       - script: dotnet restore ./tests/unit-tests/**/*.sln
         displayName: 'dotnet restore Tests UnitTests'
       - task: VSBuild@1
