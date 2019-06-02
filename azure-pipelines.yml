@@ -86,10 +86,12 @@ jobs:
           cd ./tests/unit-tests/project-references/
           dotnet restore
           cd ../../../
-      - script: dotnet restore ./tests/unit-tests/project-references/*.sln
+      - script: dotnet restore ./tests/unit-tests/project-references/UnitTests.sln
         displayName: 'dotnet restore Tests UnitTests'
-      - script: dotnet restore ./tests/unit-tests/**/*.sln
-        displayName: 'dotnet restore Tests UnitTests'
+      # - script: dotnet restore ./tests/unit-tests/project-references/*.sln
+      #   displayName: 'dotnet restore Tests UnitTests'
+      # - script: dotnet restore ./tests/unit-tests/**/*.sln
+      #   displayName: 'dotnet restore Tests UnitTests'
       - task: VSBuild@1
         displayName: 'Build Tests UnitTests'
         inputs:
@@ -104,10 +106,12 @@ jobs:
           cd ./tests/benchmark-tests/project-references/
           dotnet restore
           cd ../../../
-      - script: dotnet restore ../tests/benchmark-tests/project-references/*.sln
+      - script: dotnet restore ./tests/benchmark-tests/project-references/BenchmarkTests.sln
         displayName: 'dotnet restore Tests Benchmarks'
-      - script: dotnet restore ../tests/benchmark-tests/**/*.sln
-        displayName: 'dotnet restore Tests Benchmarks'
+      # - script: dotnet restore ../tests/benchmark-tests/project-references/*.sln
+      #   displayName: 'dotnet restore Tests Benchmarks'
+      # - script: dotnet restore ../tests/benchmark-tests/**/*.sln
+      #   displayName: 'dotnet restore Tests Benchmarks'
       - task: VSBuild@1
         displayName: 'Build Tests Benchmarks'
         inputs:
