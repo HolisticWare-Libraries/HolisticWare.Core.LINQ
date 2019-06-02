@@ -86,18 +86,26 @@ jobs:
           cd ./tests/unit-tests/project-references/
           dotnet restore
           cd ../../../
+      - script: dotnet restore ./tests/unit-tests/project-references/*.sln
+        displayName: 'dotnet restore Tests UnitTests'
       - script: dotnet restore ./tests/unit-tests/**/*.sln
         displayName: 'dotnet restore Tests UnitTests'
       - task: VSBuild@1
         displayName: 'Build Tests UnitTests'
         inputs:
-          solution: 'dotnet restore ./tests/unit-tests/**/*.sln'
+          solution: './tests/unit-tests/**/*.sln'
     #------------------------------------------------------------
     #------------------------------------------------------------
     #  - task: NuGetCommand@2
     #    displayName: 'NuGet Restore Tests Benchmarks'
     #    inputs:
     #      restoreSolution: '$(solution_tests_benchmarks)'
+      - script: |
+          cd ./tests/benchmark-tests/project-references/
+          dotnet restore
+          cd ../../../
+      - script: dotnet restore ../tests/benchmark-tests/project-references/*.sln
+        displayName: 'dotnet restore Tests Benchmarks'
       - script: dotnet restore ../tests/benchmark-tests/**/*.sln
         displayName: 'dotnet restore Tests Benchmarks'
       - task: VSBuild@1
