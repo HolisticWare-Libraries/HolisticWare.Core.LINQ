@@ -1,7 +1,7 @@
-#load "./../private-protected-sensitive/externals.private.cake"
-#load "./../common/nuget-restore.cake"
+#load "./nuget-restore.cake"
 
-//---------------------------------------------------------------------------------------
+using System.Linq;
+
 Task ("externals")
     //.IsDependentOn ("externals-base")
     // .WithCriteria (!FileExists ("./externals/HolisticWare.Core.Math.Statistics.aar"))
@@ -21,15 +21,10 @@ Task ("externals")
             foreach(string folder in folders)
             {
                 Information($"    creating ...{folder}");
-                if (! DirectoryExists (folder))
+                if (!DirectoryExists (folder))
                 {
                     CreateDirectory (folder);
                 }
-            }
-
-            if (FileExists("externals.private.cake"))
-            {
-                CakeExecuteScript("externals.private.cake");
             }
 
             Information("    downloading ...");
@@ -38,16 +33,92 @@ Task ("externals")
             // {
             // 	//DownloadFile (AAR_URL, "./externals/HolisticWare.Core.Math.Statistics.aar");
             // }
+        }
+    );
+
+IEnumerable<(string RepoName, string Url)> Externals = null;
+
+Task("externals-code-download")
+    .Does
+    (
+        () =>
+        {
+            string directory = "./externals/code-repos/";
+			EnsureDirectoryExists(directory);
+            foreach
+                (
+                    string file in System.IO.Directory.GetFiles
+                                                            (
+                                                                "./scripts/", 
+                                                                "*.csv",
+                                                                SearchOption.AllDirectories
+                                                            )
+                )
+            {
+                Information($"file = {file}");
+
+                string[] list = System.IO.File
+                                                .ReadAllLines(file)
+                                                .Where( l => ! string.IsNullOrWhiteSpace(l))
+                                                .ToArray()
+                                                ;
+                foreach(string line in list)
+                {
+                    Information($"  code = {line}");
+                    string[] parts = line.Split(new char[] {','});
+                    string name = parts[0];
+                    string url = parts[1];
+                    Information($"      name = {name}");
+                    Information($"      utl  = {url}");
+
+                    if (!FileExists($"./{directory}/{name}"))
+                    {
+                        if ( url.EndsWith(".zip"))
+                        {
+                            Information ($"DownloadFile(${url}, ./{directory}/{name});");
+                            Information ($"     release");
+                            DownloadFile($"{url}", $"./{directory}/{name}.zip");
+                        }
+                        else
+                        {
+                            url = string.Concat(url, "/archive/master.zip");
+                            Information ($"DownloadFile(${url}, ./{directory}/{name});");
+                            Information ($"     master");
+                            DownloadFile($"{url}", $"./{directory}/{name}.zip");
+                        }
+
+                        // CurlDownloadFile
+                        // 	(
+                        // 		new Uri(url.Value),
+                        // 		new CurlDownloadSettings
+                        // 		{
+                        // 			OutputPaths = new FilePath[] { $"./externals/{url}" }
+                        // 		}
+                        // 	);
+                    }
+
+                    try
+                    {
+                        Information ($"Decompressing/Unzippiong");
+                        Information ($"     (./externals/{url}, ./externals/);");
+                        Unzip ($"./{directory}/{name}.zip", $"./{directory}/{name}");
+                    }
+                    catch (System.Exception exc)
+                    {
+                        Error ($"exception : {exc?.Message}");
+                    }
+                }
+
+            }
 
             return;
-            // Externals.Initialize(Context);
-            // Externals.Execute();
+
 
             return;
         }
     );
 
-Task("externals-build")
+Task("externals-code-build")
     .IsDependentOn ("nuget-restore")
     .Does
     (
@@ -75,24 +146,3 @@ Task("externals-build")
             return;
         }
     );
-
-
-public partial class Externals
-{
-    static partial void ExedcutePrivateSensitive();
-
-    public static void Execute()
-    {
-    }
-
-    private static ICakeContext context = null;
-
-    public static void Initialize(ICakeContext c)
-    {
-        context = c;
-
-        return;
-    }
-
-}
-//---------------------------------------------------------------------------------------

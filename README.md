@@ -60,6 +60,8 @@ Used in Descriptive Statistics Package.
 
     *   thanks John Skeet for inspiration and great tutorials:
 
+    *   https://codeblog.jonskeet.uk/2010/09/03/reimplementing-linq-to-objects-part-1-introduction/
+    
     *   https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/
 
     *   https://codeblog.jonskeet.uk/2010/09/03/reimplementing-linq-to-objects-part-2-quot-where-quot/
