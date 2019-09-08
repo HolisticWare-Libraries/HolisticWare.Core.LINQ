@@ -15,5 +15,4 @@
     <Folder Include="Core\Linq\Span\" />
     <Folder Include="Core\Linq\Util\" />
   </ItemGroup>
-  <Import Project="..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems')" />
 </Project>

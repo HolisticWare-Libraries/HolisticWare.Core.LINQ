@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Linq", "HolisticWare.Core.Linq\HolisticWare.Core.Linq.shproj", "{57B0EB28-7B4E-410D-B021-0DC9D719C11F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Linq.NetStandard11", "HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj", "{C7AC153E-49ED-4B1D-95B4-A02916A1470D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Linq.NetStandard10", "HolisticWare.Core.Linq.NetStandard10\HolisticWare.Core.Linq.NetStandard10.csproj", "{D01F9C50-609D-48C7-A5A5-F1ABB797E249}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Linq", "HolisticWare.Core.Linq\HolisticWare.Core.Linq.shproj", "{57B0EB28-7B4E-410D-B021-0DC9D719C11F}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -32,5 +32,7 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D407CCD4-3E13-4090-84BA-9DE5B3A8F357}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal
