@@ -38,7 +38,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.MSTest", "netstan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests.XUnit", "netstandard10\UnitTests.XUnit\UnitTests.XUnit.csproj", "{81725784-F223-4AFF-BB08-1429519B496F}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Tests.CommonShared.netstandard10", "..\..\Tests.CommonShared.netstandard10\Tests.CommonShared.netstandard10.shproj", "{13AB4AD2-D077-48E0-B6F2-791BC25EB413}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Tests.CommonShared.netstandard11", "..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.netstandard11.shproj", "{13AB4AD2-D077-48E0-B6F2-791BC25EB413}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

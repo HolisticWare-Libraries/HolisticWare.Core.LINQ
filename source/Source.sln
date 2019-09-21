@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Linq.NetS
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Linq", "HolisticWare.Core.Linq\HolisticWare.Core.Linq.shproj", "{57B0EB28-7B4E-410D-B021-0DC9D719C11F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.ReImplemented.NetStandard10", "HolisticWare.Core.Linq.ReImplemented.NetStandard10\HolisticWare.Core.Linq.ReImplemented.NetStandard10.csproj", "{32F9E105-7AE4-4896-8D44-410669613305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.Memory.NetStandard10", "HolisticWare.Core.Linq.Memory.NetStandard10\HolisticWare.Core.Linq.Memory.NetStandard10.csproj", "{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		HolisticWare.Core.Linq\HolisticWare.Core.Linq.projitems*{57b0eb28-7b4e-410d-b021-0dc9d719c11f}*SharedItemsImports = 13
@@ -26,6 +30,14 @@ Global
 		{D01F9C50-609D-48C7-A5A5-F1ABB797E249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D01F9C50-609D-48C7-A5A5-F1ABB797E249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D01F9C50-609D-48C7-A5A5-F1ABB797E249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F9E105-7AE4-4896-8D44-410669613305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F9E105-7AE4-4896-8D44-410669613305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F9E105-7AE4-4896-8D44-410669613305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F9E105-7AE4-4896-8D44-410669613305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

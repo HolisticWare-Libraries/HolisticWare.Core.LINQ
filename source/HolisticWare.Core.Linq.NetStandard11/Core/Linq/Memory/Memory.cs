@@ -232,22 +232,6 @@ namespace Core.Linq
         //}
         #endregion
 
-        #region OrderBy/OrderByDescending
-        //public static IOrderedEnumerable<TSource> OrderBy<TSource, TKey>
-        //                                                        (
-        //                                                            this Memory<TSource> source,
-        //                                                            Func<TSource, TKey> keySelector
-        //                                                        )
-        //{
-        //    return new OrderedEnumerable<TSource>(source, ProjectionComparer.Create(keySelector));
-        //}
-
-        //public static IOrderedEnumerable<TSource> OrderByDescending<TSource, TKey>
-        //    (this Memory<TSource> source, Func<TSource, TKey> keySelector)
-        //{
-        //    return new OrderedEnumerable<TSource>(source, new ReverseComparer<TSource>(ProjectionComparer.Create(keySelector)));
-        //}
-        #endregion
 
         #region SequenceEqual
         public static bool SequenceEqual<TSource>

@@ -62,61 +62,55 @@ using ShortRunJob = HolisticWare.Core.Testing.BenchmarkTests.ShortRunJob;
 #endif
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Diagnostics;
-using System.Threading.Tasks;
-using System.IO;
-using System.Reflection;
 
 using Core.Linq;
 
 namespace UnitTests.Core.Linq
 {
-    public partial class UnitTestsSpan02
+    public partial class IEnumerable01
     {
-
         [Benchmark()]
-        public int Span_Int_Max(int[] data)
+        public double Span_Int_Average(int[] data)
         {
-            return data.Max();
+            return data.Average();
         }
 
         [Test()]
-        public void Span_Int_Max_Test()
+        public void Span_Int_Average_Test()
         {
-            int max = Span_Int_Max(array_int);
+            double average = Span_Int_Average(array_int);
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(max, 5.00, 0.01);
+            Assert.AreEqual(average, 3.00, 0.01);
             #elif XUNIT
-            Assert.Equal(max, 5.00, 2);
+            Assert.Equal(average, 3.00, 2);
             #elif MSTEST
-            Assert.AreEqual(max, 5.00, 0.01);
+            Assert.AreEqual(average, 3.00, 0.01);
             #endif
 
             return;
         }
 
         [Benchmark()]
-        public double Span_Double_Max(double[] data)
+        public double Span_Double_Average(double[] data)
         {
-            return data.Max();
+            return data.Average();
         }
 
         [Test()]
-        public void Span_Double_Max_Test()
+        public void Span_Double_Average_Test()
         {
-            double max = Span_Double_Max(array_double);
+            double average = Span_Double_Average(array_double);
 
             // Assert
             #if NUNIT
-            Assert.AreEqual(max, 5.00, 0.01);
+            Assert.AreEqual(average, 3.00, 0.01);
             #elif XUNIT
-            Assert.Equal(max, 5.00, 2);
+            Assert.Equal(average, 3.00, 2);
             #elif MSTEST
-            Assert.AreEqual(max, 5.00, 0.01);
+            Assert.AreEqual(average, 3.00, 0.01);
             #endif
 
             return;
