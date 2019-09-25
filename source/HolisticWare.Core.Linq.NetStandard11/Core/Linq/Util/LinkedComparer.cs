@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Linq.Util
+namespace Core.Linq.Memory.Util
 {
     /// <summary>
     /// Comparer to daisy-chain two existing comparers and 

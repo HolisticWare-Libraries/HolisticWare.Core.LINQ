@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Core.Linq
+namespace Core.Linq.Memory
 {
     public static partial class MemoryExtensions
     {

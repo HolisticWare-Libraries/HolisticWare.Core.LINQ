@@ -66,7 +66,7 @@ using System.Linq;
 
 using Core.Linq;
 
-namespace UnitTests.Core.Linq
+namespace Tests.CommonShared.Core.Linq
 {
     public partial class IEnumerable01
     {

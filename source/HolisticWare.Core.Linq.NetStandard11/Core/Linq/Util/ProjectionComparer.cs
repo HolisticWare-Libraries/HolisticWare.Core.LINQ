@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Core.Linq.Util
+namespace Core.Linq.Memory.Util
 {
     /// <summary>
     /// Non-generic class to produce instances of the generic class,

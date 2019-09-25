@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-using Core.Linq.Util;
+using Core.Linq.Memory.Util;
 
-namespace Core.Linq
+namespace Core.Linq.Memory
 {
     public static partial class MemoryExtensions
     {
@@ -12,9 +12,9 @@ namespace Core.Linq
                                                                     this Memory<TSource> source,
                                                                     Func<TSource, TKey> keySelector
                                                                 ) {
-            return new IOrderedEnumerable<TSource>
+            return new OrderedEnumerable<TSource>
                                         (
-                                            source,
+                                            source.ToList().AsEnumerable(),
                                             ProjectionComparer.Create(keySelector)
                                         );
         }
@@ -27,7 +27,7 @@ namespace Core.Linq
             {
             return new OrderedEnumerable<TSource>
                                         (
-                                            source,
+                                            source.ToList().AsEnumerable(),
                                             new ReverseComparer<TSource>(ProjectionComparer.Create(keySelector))
                                         );
         }

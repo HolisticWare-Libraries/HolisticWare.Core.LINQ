@@ -29,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj" />
+    <ProjectReference Include="..\..\..\..\..\source\HolisticWare.Core.Linq.Memory.NetStandard11\HolisticWare.Core.Linq.Memory.NetStandard11.csproj" />
   </ItemGroup>
   <Choose>
     <When Condition="! exists('..\..\..\..\source\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10\HolisticWare.Core.Math.Statistics.Descriptive.Sequential.NetStandard10.csproj')">
@@ -47,6 +48,5 @@
   ==================================================================================================
   -->
 
-  <Import Project="..\..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems" Label="Shared" Condition="Exists('..\..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems')" />
   <Import Project="..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
 </Project>

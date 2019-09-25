@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Linq.Util
+namespace Core.Linq.Memory.Util
 {
     /// <summary>
     /// Implementation of IComparer{T} based on another one;

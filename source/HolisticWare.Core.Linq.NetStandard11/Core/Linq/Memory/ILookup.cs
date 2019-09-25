@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Linq
+namespace Core.Linq.Memory
 {
     public interface ILookup<TKey, TElement> : IEnumerable<IGrouping<TKey, TElement>>
     {

@@ -14,7 +14,7 @@
     <DefineConstants>TRACE;MSTEST;RELEASE;NETCOREAPP2_0</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.5.1" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
     <PackageReference Include="Nito.AsyncEx.Tasks" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
     <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj" />
+    <ProjectReference Include="..\..\..\..\..\source\HolisticWare.Core.Linq.Memory.NetStandard11\HolisticWare.Core.Linq.Memory.NetStandard11.csproj" />
   </ItemGroup>
   <Choose>
     <When Condition="! exists('..\..\..\..\source\HolisticWare.Core.Linq.NetStandard11\HolisticWare.Core.Linq.NetStandard11.csproj')">
@@ -43,6 +44,5 @@
   If projects for references can be found use ProjectReferences otherwise use NuGet references
   ==================================================================================================
   -->
-  <Import Project="..\..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems" Label="Shared" Condition="Exists('..\..\..\..\Tests.CommonShared.netstandard11\Tests.CommonShared.projitems')" />
   <Import Project="..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems" Label="Shared" Condition="Exists('..\..\..\UnitTests.Common.Utils.Shared\UnitTests.Common.Utils.Shared.projitems')" />
 </Project>

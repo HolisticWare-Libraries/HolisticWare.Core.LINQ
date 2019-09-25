@@ -11,7 +11,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Linq", "H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.ReImplemented.NetStandard10", "HolisticWare.Core.Linq.ReImplemented.NetStandard10\HolisticWare.Core.Linq.ReImplemented.NetStandard10.csproj", "{32F9E105-7AE4-4896-8D44-410669613305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.Memory.NetStandard10", "HolisticWare.Core.Linq.Memory.NetStandard10\HolisticWare.Core.Linq.Memory.NetStandard10.csproj", "{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Linq.Memory.NetStandard11", "HolisticWare.Core.Linq.Memory.NetStandard11\HolisticWare.Core.Linq.Memory.NetStandard11.csproj", "{509A1E1D-297B-4E44-B471-CF1D4AA009DB}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -34,10 +34,10 @@ Global
 		{32F9E105-7AE4-4896-8D44-410669613305}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F9E105-7AE4-4896-8D44-410669613305}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F9E105-7AE4-4896-8D44-410669613305}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63D240C0-61E7-42A1-B7CF-EE8A11F96E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509A1E1D-297B-4E44-B471-CF1D4AA009DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509A1E1D-297B-4E44-B471-CF1D4AA009DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509A1E1D-297B-4E44-B471-CF1D4AA009DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509A1E1D-297B-4E44-B471-CF1D4AA009DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
