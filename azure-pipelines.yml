@@ -10,125 +10,8 @@ variables:
 
 jobs:
 
-  - job: build_windows_vs2019
-    displayName: Build on Windows VS2019
-    pool:
-      vmImage: windows-2019
-    variables:
-      solution_source:              './source/**/*.sln'
-      solution_samples:             './samples/**/*.sln'
-      solution_tests_unit_tests:    './tests/unit-tests/**/*.sln'
-      solution_tests_benchmarks:    './tests/benchmarks/**/*.sln'
-    steps:
-      - checkout: self
-        submodules: recursive
-      - task: NuGetToolInstaller@0
-        displayName: 'Install NuGet'
-      - task: DotNetCoreInstaller@0
-        inputs:
-          version: '3.0.100-preview4-010963'
-      - task: DotNetCoreInstaller@0
-        displayName: 'Install .NET Core sdk 3.0'
-        inputs:
-          version: '3.0.100-preview4-010963'
-      - task: DotNetCoreInstaller@0
-        displayName: 'Install .NET Core sdk 2.2.300'
-        inputs:
-          version: '2.2.300'
-      # - script: dotnet dev-certs https --trust
-      - script: choco install visualstudio2019-workload-netcorebuildtools
-      - script: choco install dotnetcore-sdk --pre
-      - script: choco install dotnetcore-sdk
-      # - script: vs_buildtools.exe --add Microsoft.VisualStudio.Component.NuGet --quiet
-      - task: UseDotNet@2
-        displayName: 'Use .NET Core SDK'
-        inputs:
-          packageType: sdk
-          version: 2.2.300
-          includePreviewVersions: true
-          installationPath: $(Agent.ToolsDirectory)/dotnet
-    #------------------------------------------------------------
-      - task: NuGetCommand@2
-        displayName: 'NuGet Restore Source'
-        inputs:
-          restoreSolution: '$(solution_source)'
-      - script: |
-          cd ./source/
-          dotnet restore
-          cd ../
-        displayName: 'dotnet restore Source'
-      - task: VSBuild@1
-        displayName: 'Build Source'
-        inputs:
-          solution: '$(solution_source)'
-    #------------------------------------------------------------
-    #------------------------------------------------------------
-    #  - task: NuGetCommand@2
-    #    displayName: 'NuGet Restore Samples'
-    #    inputs:
-    #      restoreSolution: '$(solution_samples)'
-      - script: |
-          cd ./samples/
-          dotnet restore
-          cd ../
-        displayName: 'dotnet restore Samples'
-      - task: VSBuild@1
-        displayName: 'Build Samples'
-        inputs:
-          solution: '$(solution_samples)'
-    #------------------------------------------------------------
-    #------------------------------------------------------------
-    #  - task: NuGetCommand@2
-    #    displayName: 'NuGet Restore Tests UnitTests'
-    #    inputs:
-    #      restoreSolution: '$(solution_tests_unit_tests)'
-      - script: |
-          cd ./tests/unit-tests/project-references/
-          dotnet restore
-          cd ../../../
-      - script: dotnet restore ./tests/unit-tests/project-references/UnitTests.sln
-        displayName: 'dotnet restore Tests UnitTests'
-      # - script: dotnet restore ./tests/unit-tests/project-references/*.sln
-      #   displayName: 'dotnet restore Tests UnitTests'
-      # - script: dotnet restore ./tests/unit-tests/**/*.sln
-      #   displayName: 'dotnet restore Tests UnitTests'
-      - task: VSBuild@1
-        displayName: 'Build Tests UnitTests'
-        inputs:
-          solution: './tests/unit-tests/**/*.sln'
-    #------------------------------------------------------------
-    #------------------------------------------------------------
-    #  - task: NuGetCommand@2
-    #    displayName: 'NuGet Restore Tests Benchmarks'
-    #    inputs:
-    #      restoreSolution: '$(solution_tests_benchmarks)'
-      - script: |
-          cd ./tests/benchmark-tests/project-references/
-          dotnet restore
-          cd ../../../
-      - script: dotnet restore ./tests/benchmark-tests/project-references/BenchmarkTests.sln
-        displayName: 'dotnet restore Tests Benchmarks'
-      # - script: dotnet restore ../tests/benchmark-tests/project-references/*.sln
-      #   displayName: 'dotnet restore Tests Benchmarks'
-      # - script: dotnet restore ../tests/benchmark-tests/**/*.sln
-      #   displayName: 'dotnet restore Tests Benchmarks'
-      - task: VSBuild@1
-        displayName: 'Build Tests Benchmarks'
-        inputs:
-          solution: './tests/benchmark-tests/**/*.sln'
-    #------------------------------------------------------------
-      - powershell: .\build.ps1
-        displayName: Run Cake Build
-      - task: PublishTestResults@2
-        displayName: Publish test results
-        condition: always()
-        inputs:
-          testResultsFormat: xUnit
-          testResultsFiles: tests/**/TestResults/TestResults.xml
-          testRunTitle: Windows Tests
-
-  - job: build_windows_vs2017
-    displayName: Build on Windows VS2017
+  - job: build_windows
+    displayName: Build on Windows
     pool:
       vmImage: vs2017-win2016
     steps:
@@ -145,7 +28,7 @@ jobs:
           testRunTitle: Windows Tests
 
   - job: build_macos
-    displayName: Build on macOS VS4Mac
+    displayName: Build on macOS
     pool:
       vmImage: macos-10.13
     steps:
