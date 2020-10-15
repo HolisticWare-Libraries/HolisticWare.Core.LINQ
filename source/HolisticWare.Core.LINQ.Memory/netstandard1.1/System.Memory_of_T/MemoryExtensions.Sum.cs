@@ -4,6 +4,19 @@ namespace Core.LINQ.Memory
 {
     public static partial class MemoryExtensions
     {
+        public static sbyte Sum(this System.Memory<sbyte> m)
+        {
+            Span<sbyte> s = m.Span;
+            sbyte sum = 0;
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                sum += s[i];
+            }
+
+            return sum;
+        }
+
         public static byte Sum(this System.Memory<byte> m)
         {
             Span<byte> s = m.Span;

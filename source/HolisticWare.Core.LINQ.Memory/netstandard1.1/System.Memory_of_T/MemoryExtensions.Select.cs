@@ -12,11 +12,6 @@ namespace Core.LINQ.Memory
                                                         Func<TSource, TResult> projection
                                                     )
         {
-            //if (source == null)
-            //{
-            //    throw new ArgumentNullException();
-            //}
-
             return SelectImpl(source, projection);
         }
 
@@ -26,9 +21,9 @@ namespace Core.LINQ.Memory
                                                         Func<TSource, TResult> projection
                                                     )
         {
-            foreach (TSource item in source.ToEnumerable())
+            for (int i = 0; i <= source.Length; i++)
             {
-                yield return projection(item);
+                yield return projection(source.Span[i]);
             }
         }
     }

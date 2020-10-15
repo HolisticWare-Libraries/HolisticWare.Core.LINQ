@@ -6,7 +6,7 @@ namespace Core.LINQ.Memory
 {
     class Lookup<TKey, TElement> : ILookup<TKey, TElement>
     {
-        Dictionary<TKey, Memory<TElement>> dict = new Dictionary<TKey, Memory<TElement>>();
+        readonly Dictionary<TKey, Memory<TElement>> dict = new Dictionary<TKey, Memory<TElement>>();
 
         internal Lookup()
         {
